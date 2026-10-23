@@ -12,6 +12,13 @@
 
 需要 Python 3.9+，使用 Python 版 `meme-generator`，不是 `meme-generator-rs`。
 
+Linux 上的上游 Skia 还需要系统图形运行库。例如 Debian / Ubuntu：
+
+```bash
+sudo apt-get update
+sudo apt-get install -y libegl1 libgl1
+```
+
 ```bash
 git clone https://github.com/TonyLiangP2010405/mantou-memes.git
 cd mantou-memes
