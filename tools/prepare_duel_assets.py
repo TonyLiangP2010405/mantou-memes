@@ -9,7 +9,7 @@ import urllib.request
 from pathlib import Path
 
 import certifi
-from PIL import Image
+from PIL import Image, ImageDraw
 
 ROOT = Path(__file__).resolve().parents[1] / "memes" / "mantou_duel"
 
@@ -36,7 +36,10 @@ def prepare(cache, offline=False):
             frames, durations = [], []
             for i in range(getattr(source, "n_frames", 1)):
                 source.seek(i)
-                crop = source.convert("RGBA").crop(template["crop"])
+                original = source.convert("RGBA")
+                for region in template.get("erase_rects", []):
+                    ImageDraw.Draw(original).rectangle(region["box"], fill=region["fill"])
+                crop = original.crop(template["crop"])
                 background = Image.new("RGB", crop.size, "white")
                 background.paste(crop, (0, 0), crop)
                 frames.append(background)

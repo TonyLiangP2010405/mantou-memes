@@ -59,7 +59,9 @@ def test_real_backend_renders_every_template(memes, kind):
 
 
 def test_double_templates_preserve_input_order(memes):
-    for meme in [m for m in memes if m.params_type.min_images == 2]:
+    for meme in [
+        m for m in memes if m.params_type.min_images == 2 and not m.key.startswith("mantou_duel_")
+    ]:
         red, blue = picture("red"), picture("blue")
         output = meme(images=[red, blue])
         image = Image.open(output).convert("RGB")

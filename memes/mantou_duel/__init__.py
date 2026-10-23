@@ -1,61 +1,55 @@
-"""Cropped internet reaction images with personalized, replaceable captions."""
+"""Cropped reaction backgrounds with avatar replacement; no rendered captions."""
 
 import json
 from datetime import datetime
-from functools import lru_cache, partial
+from functools import partial
 from io import BytesIO
 from pathlib import Path
 
 from meme_generator import add_meme
-from PIL import Image, ImageDraw, ImageFont, ImageOps
+from PIL import Image, ImageDraw, ImageOps
 
 ROOT = Path(__file__).parent
-FONT = ROOT.parent / "mantou" / "NotoSansSC.ttf"
 TEMPLATES = json.loads((ROOT / "templates.json").read_text(encoding="utf-8"))
 
 
-@lru_cache(maxsize=24)
-def font(size):
-    return ImageFont.truetype(str(FONT), size)
-
-
-def frame(source, caption):
+def frame(source, avatars, faces):
     canvas = Image.new("RGB", (512, 512), "white")
     source = source.convert("RGBA")
     resample = Image.Resampling.NEAREST if min(source.size) < 96 else Image.Resampling.LANCZOS
-    source = ImageOps.contain(source, (480, 366), method=resample)
-    canvas.paste(source, ((512 - source.width) // 2, (380 - source.height) // 2), source)
-    lines = caption.splitlines()
-    draw = ImageDraw.Draw(canvas)
-    size = 36
-    while size > 16 and max(draw.textlength(line, font=font(size)) for line in lines) > 462:
-        size -= 2
-    for i, line in enumerate(lines):
-        draw.text(
-            (256, 442 + (i - (len(lines) - 1) / 2) * (size + 12)),
-            line,
-            font=font(size),
-            fill="#161616",
-            anchor="mm",
-            stroke_width=1,
-        )
+    base = ImageOps.contain(source, (496, 496), method=resample)
+    left, top = (512 - base.width) // 2, (512 - base.height) // 2
+    canvas.paste(base, (left, top), base)
+    sx, sy = base.width / source.width, base.height / source.height
+    for avatar, face in zip(avatars, faces):
+        x0, y0, x1, y1 = face["box"]
+        x0, x1 = round(x0 * sx) + left, round(x1 * sx) + left
+        y0, y1 = round(y0 * sy) + top, round(y1 * sy) + top
+        size = (x1 - x0, y1 - y0)
+        target = avatar.image.convert("RGBA")
+        if face.get("angle", 0):
+            target = target.rotate(face["angle"], expand=True)
+        target = ImageOps.fit(target, size, method=Image.Resampling.LANCZOS)
+        opaque = Image.new("RGB", size, "white")
+        opaque.paste(target, (0, 0), target)
+        mask = Image.new("L", (size[0] * 3, size[1] * 3))
+        ImageDraw.Draw(mask).ellipse((0, 0, mask.width - 1, mask.height - 1), fill=255)
+        mask = mask.resize(size, Image.Resampling.LANCZOS)
+        canvas.paste(opaque, (x0, y0), mask)
     return canvas
 
 
 def render(template, images, texts, args):
-    name = " ".join(texts[0].split()) or "群友"
-    if len(name) > 20:
-        name = name[:19] + "…"
-    caption = template["caption"].replace("{name}，", name + "，\n")
     output = BytesIO()
     with Image.open(ROOT / "images" / template["asset"]) as source:
         if not template["animated"]:
-            frame(source, caption).save(output, "PNG")
+            frame(source, images, template["faces"]).save(output, "PNG")
         else:
             frames, durations = [], []
             for i in range(source.n_frames):
                 source.seek(i)
-                frames.append(frame(source, caption))
+                faces = template.get("frame_faces", [template["faces"]] * source.n_frames)[i]
+                frames.append(frame(source, images, faces))
                 durations.append(source.info.get("duration", 100))
             frames[0].save(
                 output,
@@ -74,15 +68,15 @@ for template in TEMPLATES:
     add_meme(
         template["key"],
         partial(render, template),
-        min_images=0,
-        max_images=0,
-        min_texts=1,
-        max_texts=1,
-        default_texts=["群友"],
-        keywords=["馒头对线" + template["name"]],
+        min_images=template["images"],
+        max_images=template["images"],
+        min_texts=0,
+        max_texts=0,
+        keywords=["馒头换头" + template["name"]],
         tags={
             "mantou-memes",
             "对线",
+            "换头像",
             template["category"],
             "动图" if template["animated"] else "静态",
         },

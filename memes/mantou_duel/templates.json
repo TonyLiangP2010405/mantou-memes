@@ -2,7 +2,6 @@
   {
     "key": "mantou_duel_001",
     "name": "管理员出场",
-    "caption": "{name}，先把你的逻辑请进群。",
     "category": "熊猫头",
     "asset": "001.png",
     "animated": false,
@@ -22,12 +21,24 @@
     ],
     "reviewed_source_index": 0,
     "source_frames": 1,
-    "asset_sha256": "a2ea5c3402e53b4f50ad042bacd189e1f3f8809caf543f0742a276e59440e669"
+    "asset_sha256": "a2ea5c3402e53b4f50ad042bacd189e1f3f8809caf543f0742a276e59440e669",
+    "erase_rects": [],
+    "faces": [
+      {
+        "box": [
+          37,
+          14,
+          151,
+          122
+        ],
+        "angle": 0
+      }
+    ],
+    "images": 1
   },
   {
     "key": "mantou_duel_002",
     "name": "笑着退场",
-    "caption": "{name}，你赢了，我先笑一会儿。",
     "category": "熊猫头",
     "asset": "002.png",
     "animated": false,
@@ -47,12 +58,24 @@
     ],
     "reviewed_source_index": 1,
     "source_frames": 1,
-    "asset_sha256": "5008f75a270fb015a2e80b3a90485bd21c53d30006d0ce0405ca0a76a8e7f0c0"
+    "asset_sha256": "5008f75a270fb015a2e80b3a90485bd21c53d30006d0ce0405ca0a76a8e7f0c0",
+    "erase_rects": [],
+    "faces": [
+      {
+        "box": [
+          17,
+          5,
+          83,
+          67
+        ],
+        "angle": 0
+      }
+    ],
+    "images": 1
   },
   {
     "key": "mantou_duel_003",
     "name": "邪魅旁听",
-    "caption": "{name}，继续编，我爱听。",
     "category": "熊猫头",
     "asset": "003.png",
     "animated": false,
@@ -72,12 +95,24 @@
     ],
     "reviewed_source_index": 3,
     "source_frames": 1,
-    "asset_sha256": "a605eb5eac51c96b93ae8e2e86549faa31668bc8135e9f99abf0dbff23868945"
+    "asset_sha256": "a605eb5eac51c96b93ae8e2e86549faa31668bc8135e9f99abf0dbff23868945",
+    "erase_rects": [],
+    "faces": [
+      {
+        "box": [
+          16,
+          8,
+          79,
+          68
+        ],
+        "angle": 0
+      }
+    ],
+    "images": 1
   },
   {
     "key": "mantou_duel_004",
     "name": "当场语塞",
-    "caption": "{name}，这话把我整不会了。",
     "category": "熊猫头",
     "asset": "004.png",
     "animated": false,
@@ -87,7 +122,7 @@
     "source_sha256": "78b050fd3fd47d8378f26b3969b797ab9dd1fef58f985fb2c92edd6de9ec86e8",
     "crop": [
       0,
-      0,
+      22,
       103,
       70
     ],
@@ -97,12 +132,34 @@
     ],
     "reviewed_source_index": 4,
     "source_frames": 1,
-    "asset_sha256": "e95544a7ca9fc4a6c6fa5ec21f090f57a8796b610f2ab9193243cf6e614258bc"
+    "asset_sha256": "5729f64af46498c4dbc2114f06e94362c4bc048924e7648d392fa0c6106c3f78",
+    "erase_rects": [
+      {
+        "box": [
+          0,
+          0,
+          103,
+          29
+        ],
+        "fill": "black"
+      }
+    ],
+    "faces": [
+      {
+        "box": [
+          21,
+          3,
+          92,
+          48
+        ],
+        "angle": 0
+      }
+    ],
+    "images": 1
   },
   {
     "key": "mantou_duel_005",
     "name": "表面礼貌",
-    "caption": "{name}，礼貌一点我还能多听两句。",
     "category": "熊猫头",
     "asset": "005.png",
     "animated": false,
@@ -122,12 +179,24 @@
     ],
     "reviewed_source_index": 5,
     "source_frames": 1,
-    "asset_sha256": "9d437629218077952938cf3fd8b7d8b5181848c63fa3e14066b7fccf79681108"
+    "asset_sha256": "9d437629218077952938cf3fd8b7d8b5181848c63fa3e14066b7fccf79681108",
+    "erase_rects": [],
+    "faces": [
+      {
+        "box": [
+          143,
+          90,
+          405,
+          337
+        ],
+        "angle": 0
+      }
+    ],
+    "images": 1
   },
   {
     "key": "mantou_duel_006",
     "name": "戏太多了",
-    "caption": "{name}，戏可以少一点，重点可以多一点。",
     "category": "熊猫头",
     "asset": "006.png",
     "animated": false,
@@ -147,12 +216,24 @@
     ],
     "reviewed_source_index": 6,
     "source_frames": 1,
-    "asset_sha256": "e32b2a0417a2a6b3c1ba5744e255c719d5f395768ac7a14a2c7ca8f3091d33ca"
+    "asset_sha256": "e32b2a0417a2a6b3c1ba5744e255c719d5f395768ac7a14a2c7ca8f3091d33ca",
+    "erase_rects": [],
+    "faces": [
+      {
+        "box": [
+          130,
+          44,
+          523,
+          422
+        ],
+        "angle": 0
+      }
+    ],
+    "images": 1
   },
   {
     "key": "mantou_duel_007",
     "name": "不过如此",
-    "caption": "{name}，气势很足，内容再补补。",
     "category": "熊猫头",
     "asset": "007.png",
     "animated": false,
@@ -172,12 +253,24 @@
     ],
     "reviewed_source_index": 7,
     "source_frames": 1,
-    "asset_sha256": "35726633cecc4b8ba6fb3d0fc615dc6760442d1c60d42c40820848db50addc4d"
+    "asset_sha256": "35726633cecc4b8ba6fb3d0fc615dc6760442d1c60d42c40820848db50addc4d",
+    "erase_rects": [],
+    "faces": [
+      {
+        "box": [
+          13,
+          5,
+          48,
+          40
+        ],
+        "angle": 0
+      }
+    ],
+    "images": 1
   },
   {
     "key": "mantou_duel_008",
     "name": "耐心余额",
-    "caption": "{name}，我的耐心正在下班。",
     "category": "熊猫头",
     "asset": "008.png",
     "animated": false,
@@ -197,12 +290,24 @@
     ],
     "reviewed_source_index": 8,
     "source_frames": 1,
-    "asset_sha256": "e0e99a050d83c7984d828c5ad78a7a85f49390376a4b7d1e46ecefb143506c3d"
+    "asset_sha256": "e0e99a050d83c7984d828c5ad78a7a85f49390376a4b7d1e46ecefb143506c3d",
+    "erase_rects": [],
+    "faces": [
+      {
+        "box": [
+          18,
+          10,
+          85,
+          78
+        ],
+        "angle": 0
+      }
+    ],
+    "images": 1
   },
   {
     "key": "mantou_duel_009",
     "name": "点名发言",
-    "caption": "{name}，请解释一下刚才的逻辑。",
     "category": "熊猫头",
     "asset": "009.png",
     "animated": false,
@@ -222,12 +327,24 @@
     ],
     "reviewed_source_index": 9,
     "source_frames": 1,
-    "asset_sha256": "0dd381d9b39ec873e7e875375a9820a437dff1e014d1393f1e704af7ae3f45d7"
+    "asset_sha256": "0dd381d9b39ec873e7e875375a9820a437dff1e014d1393f1e704af7ae3f45d7",
+    "erase_rects": [],
+    "faces": [
+      {
+        "box": [
+          10,
+          5,
+          53,
+          44
+        ],
+        "angle": 0
+      }
+    ],
+    "images": 1
   },
   {
     "key": "mantou_duel_010",
     "name": "眼镜审题",
-    "caption": "{name}，我把眼镜戴上再审一遍。",
     "category": "熊猫头",
     "asset": "010.png",
     "animated": false,
@@ -247,12 +364,24 @@
     ],
     "reviewed_source_index": 10,
     "source_frames": 1,
-    "asset_sha256": "8c551a6da0e2fb9f7ba7ab1398365f7979f53aa9611d6cec2bb4e0f66b51c89b"
+    "asset_sha256": "8c551a6da0e2fb9f7ba7ab1398365f7979f53aa9611d6cec2bb4e0f66b51c89b",
+    "erase_rects": [],
+    "faces": [
+      {
+        "box": [
+          43,
+          19,
+          223,
+          179
+        ],
+        "angle": 0
+      }
+    ],
+    "images": 1
   },
   {
     "key": "mantou_duel_011",
     "name": "一句没懂",
-    "caption": "{name}，每个字都认识，合起来不懂。",
     "category": "熊猫头",
     "asset": "011.png",
     "animated": false,
@@ -272,12 +401,24 @@
     ],
     "reviewed_source_index": 12,
     "source_frames": 1,
-    "asset_sha256": "f20606135fbd69f2a9fa75a9f5f06cc1a5064c3013bc8a9c692bd1ac27e1896b"
+    "asset_sha256": "f20606135fbd69f2a9fa75a9f5f06cc1a5064c3013bc8a9c692bd1ac27e1896b",
+    "erase_rects": [],
+    "faces": [
+      {
+        "box": [
+          50,
+          30,
+          265,
+          232
+        ],
+        "angle": 0
+      }
+    ],
+    "images": 1
   },
   {
     "key": "mantou_duel_012",
     "name": "喝茶看戏",
-    "caption": "{name}，你先说，我的茶还没凉。",
     "category": "熊猫头",
     "asset": "012.png",
     "animated": false,
@@ -297,12 +438,34 @@
     ],
     "reviewed_source_index": 13,
     "source_frames": 1,
-    "asset_sha256": "d94b9441ec41f80041576bd0a6d47ee3cf2bbf8735bb0d5c5baa3262959bcd5d"
+    "asset_sha256": "ecc3d3317d8690cee40fe0f5f67f4bc94913bcfa97302ca3a3afb3d0bc9caf37",
+    "erase_rects": [
+      {
+        "box": [
+          85,
+          100,
+          160,
+          137
+        ],
+        "fill": "white"
+      }
+    ],
+    "faces": [
+      {
+        "box": [
+          33,
+          10,
+          140,
+          98
+        ],
+        "angle": 0
+      }
+    ],
+    "images": 1
   },
   {
     "key": "mantou_duel_013",
     "name": "低光沉默",
-    "caption": "{name}，沉默是我最后的体面。",
     "category": "熊猫头",
     "asset": "013.png",
     "animated": false,
@@ -322,12 +485,24 @@
     ],
     "reviewed_source_index": 14,
     "source_frames": 1,
-    "asset_sha256": "57b7ce187920ba8674036eeca2a0e8f68dd7005e7bd2090d58bb298518edefa9"
+    "asset_sha256": "57b7ce187920ba8674036eeca2a0e8f68dd7005e7bd2090d58bb298518edefa9",
+    "erase_rects": [],
+    "faces": [
+      {
+        "box": [
+          37,
+          20,
+          150,
+          112
+        ],
+        "angle": 0
+      }
+    ],
+    "images": 1
   },
   {
     "key": "mantou_duel_014",
     "name": "捂嘴震惊",
-    "caption": "{name}，这段居然是认真说的？",
     "category": "熊猫头",
     "asset": "014.png",
     "animated": false,
@@ -347,12 +522,24 @@
     ],
     "reviewed_source_index": 15,
     "source_frames": 1,
-    "asset_sha256": "4fce5555607e0610d8cec87d4fad35ab0cbe08ba2399ec0327e29f2be1f817f0"
+    "asset_sha256": "4fce5555607e0610d8cec87d4fad35ab0cbe08ba2399ec0327e29f2be1f817f0",
+    "erase_rects": [],
+    "faces": [
+      {
+        "box": [
+          32,
+          16,
+          107,
+          84
+        ],
+        "angle": 0
+      }
+    ],
+    "images": 1
   },
   {
     "key": "mantou_duel_015",
     "name": "举手补充",
-    "caption": "{name}，我有个小问题：证据呢？",
     "category": "熊猫头",
     "asset": "015.png",
     "animated": false,
@@ -372,12 +559,24 @@
     ],
     "reviewed_source_index": 16,
     "source_frames": 1,
-    "asset_sha256": "9c9ebd8b342932dff47287138d2bfa82b73f178a6e5fb56bfadb2e9ede7cefe7"
+    "asset_sha256": "9c9ebd8b342932dff47287138d2bfa82b73f178a6e5fb56bfadb2e9ede7cefe7",
+    "erase_rects": [],
+    "faces": [
+      {
+        "box": [
+          145,
+          41,
+          587,
+          502
+        ],
+        "angle": 0
+      }
+    ],
+    "images": 1
   },
   {
     "key": "mantou_duel_016",
     "name": "结束聊天",
-    "caption": "{name}，本轮对话暂时散会。",
     "category": "熊猫头",
     "asset": "016.png",
     "animated": false,
@@ -397,12 +596,24 @@
     ],
     "reviewed_source_index": 17,
     "source_frames": 1,
-    "asset_sha256": "e559f6eef080ba5254ce7482b20de0eb631dd4a25b273bdd2d11288e2e07bf79"
+    "asset_sha256": "e559f6eef080ba5254ce7482b20de0eb631dd4a25b273bdd2d11288e2e07bf79",
+    "erase_rects": [],
+    "faces": [
+      {
+        "box": [
+          109,
+          28,
+          253,
+          168
+        ],
+        "angle": 0
+      }
+    ],
+    "images": 1
   },
   {
     "key": "mantou_duel_017",
     "name": "先盘逻辑",
-    "caption": "{name}，先盘逻辑，别盘语气。",
     "category": "熊猫头",
     "asset": "017.png",
     "animated": false,
@@ -422,12 +633,24 @@
     ],
     "reviewed_source_index": 21,
     "source_frames": 1,
-    "asset_sha256": "a14a50131b74ac301f58bec4cb1cd7eb35d37fc456e3fba60bb4d0a5be615ba1"
+    "asset_sha256": "a14a50131b74ac301f58bec4cb1cd7eb35d37fc456e3fba60bb4d0a5be615ba1",
+    "erase_rects": [],
+    "faces": [
+      {
+        "box": [
+          42,
+          15,
+          167,
+          135
+        ],
+        "angle": 0
+      }
+    ],
+    "images": 1
   },
   {
     "key": "mantou_duel_018",
     "name": "临时主持",
-    "caption": "{name}，抢答前请先听完题目。",
     "category": "熊猫头",
     "asset": "018.png",
     "animated": false,
@@ -447,12 +670,24 @@
     ],
     "reviewed_source_index": 22,
     "source_frames": 1,
-    "asset_sha256": "69e1371723cb19c71b55c854b3f20d41268ddf48db5ff8b1db2aaa47e4573454"
+    "asset_sha256": "69e1371723cb19c71b55c854b3f20d41268ddf48db5ff8b1db2aaa47e4573454",
+    "erase_rects": [],
+    "faces": [
+      {
+        "box": [
+          102,
+          44,
+          532,
+          445
+        ],
+        "angle": 0
+      }
+    ],
+    "images": 1
   },
   {
     "key": "mantou_duel_019",
     "name": "搬砖疑问",
-    "caption": "{name}，我搬着砖都没想明白。",
     "category": "熊猫头",
     "asset": "019.png",
     "animated": false,
@@ -472,12 +707,24 @@
     ],
     "reviewed_source_index": 23,
     "source_frames": 1,
-    "asset_sha256": "adc45528985b684de527b7e169b0e6a583b1e0fc53367c2c186398c8daf31cb2"
+    "asset_sha256": "adc45528985b684de527b7e169b0e6a583b1e0fc53367c2c186398c8daf31cb2",
+    "erase_rects": [],
+    "faces": [
+      {
+        "box": [
+          3,
+          9,
+          57,
+          72
+        ],
+        "angle": 0
+      }
+    ],
+    "images": 1
   },
   {
     "key": "mantou_duel_020",
     "name": "太会说了",
-    "caption": "{name}，这话术练了多久？",
     "category": "熊猫头",
     "asset": "020.png",
     "animated": false,
@@ -497,12 +744,24 @@
     ],
     "reviewed_source_index": 24,
     "source_frames": 1,
-    "asset_sha256": "30e0902ca1fe6d39d8f47f988447cebbc99ea43102eaf9d0712d499af2f09d8d"
+    "asset_sha256": "30e0902ca1fe6d39d8f47f988447cebbc99ea43102eaf9d0712d499af2f09d8d",
+    "erase_rects": [],
+    "faces": [
+      {
+        "box": [
+          44,
+          19,
+          104,
+          90
+        ],
+        "angle": 0
+      }
+    ],
+    "images": 1
   },
   {
     "key": "mantou_duel_021",
     "name": "场外求助",
-    "caption": "{name}，我得找个翻译来。",
     "category": "熊猫头",
     "asset": "021.png",
     "animated": false,
@@ -522,12 +781,34 @@
     ],
     "reviewed_source_index": 25,
     "source_frames": 1,
-    "asset_sha256": "dd8210e844a072e4f9588447b8274aebaf67c5bfb95d3611421238ee4b21b2fa"
+    "asset_sha256": "732b3cb3ccff8245ddf306a1fdb83afa38371a499c55f98c5657be7109904c33",
+    "erase_rects": [
+      {
+        "box": [
+          0,
+          0,
+          128,
+          98
+        ],
+        "fill": "white"
+      }
+    ],
+    "faces": [
+      {
+        "box": [
+          171,
+          14,
+          284,
+          140
+        ],
+        "angle": 0
+      }
+    ],
+    "images": 1
   },
   {
     "key": "mantou_duel_022",
     "name": "下次还听",
-    "caption": "{name}，道理我懂，下次还围观。",
     "category": "熊猫头",
     "asset": "022.png",
     "animated": false,
@@ -547,12 +828,24 @@
     ],
     "reviewed_source_index": 26,
     "source_frames": 1,
-    "asset_sha256": "0e4db4159e8ef5982baef02bc9abb8a314fe2eb694c2bb2359f753aab79ad774"
+    "asset_sha256": "0e4db4159e8ef5982baef02bc9abb8a314fe2eb694c2bb2359f753aab79ad774",
+    "erase_rects": [],
+    "faces": [
+      {
+        "box": [
+          35,
+          16,
+          193,
+          167
+        ],
+        "angle": 0
+      }
+    ],
+    "images": 1
   },
   {
     "key": "mantou_duel_023",
     "name": "无语省略号",
-    "caption": "{name}，给你留一串省略号。",
     "category": "熊猫头",
     "asset": "023.png",
     "animated": false,
@@ -572,12 +865,24 @@
     ],
     "reviewed_source_index": 27,
     "source_frames": 1,
-    "asset_sha256": "005c532da2a12e59ae7f8ffc2c752f6f172da75347580b9c2565055a9d4c95e7"
+    "asset_sha256": "005c532da2a12e59ae7f8ffc2c752f6f172da75347580b9c2565055a9d4c95e7",
+    "erase_rects": [],
+    "faces": [
+      {
+        "box": [
+          36,
+          9,
+          185,
+          151
+        ],
+        "angle": 0
+      }
+    ],
+    "images": 1
   },
   {
     "key": "mantou_duel_024",
     "name": "笑而不答",
-    "caption": "{name}，你说得对，我不接话。",
     "category": "熊猫头",
     "asset": "024.png",
     "animated": false,
@@ -597,37 +902,61 @@
     ],
     "reviewed_source_index": 28,
     "source_frames": 1,
-    "asset_sha256": "68c4dcc1f15010d8620946be45fc6b71b7c8595493821857793ac16713b6876b"
+    "asset_sha256": "68c4dcc1f15010d8620946be45fc6b71b7c8595493821857793ac16713b6876b",
+    "erase_rects": [],
+    "faces": [
+      {
+        "box": [
+          42,
+          9,
+          179,
+          157
+        ],
+        "angle": 0
+      }
+    ],
+    "images": 1
   },
   {
     "key": "mantou_duel_025",
-    "name": "预算不足",
-    "caption": "{name}，这个故事的预算不太够。",
+    "name": "当场愣住",
     "category": "熊猫头",
     "asset": "025.png",
     "animated": false,
-    "source_url": "https://raw.githubusercontent.com/zhaoolee/ChineseBQB/d675832ad842413679dd4a132bbfa3c311057119/015Golden_Curator_Panda%E9%87%91%E9%A6%86%E9%95%BF%E7%86%8A%E7%8C%AB%F0%9F%90%BCBQB/%E9%87%91%E9%A6%86%E9%95%BF%E7%86%8A%E7%8C%AB00045-%E5%9B%A0%E4%B8%BA%E6%88%91%E7%9A%84%E5%AE%B6%E5%BA%AD%E6%9D%A1%E4%BB%B6%E4%BD%A0%E4%B9%9F%E7%9F%A5%E9%81%93.jpg",
-    "source_path": "015Golden_Curator_Panda金馆长熊猫🐼BQB/金馆长熊猫00045-因为我的家庭条件你也知道.jpg",
+    "source_url": "https://raw.githubusercontent.com/zhaoolee/ChineseBQB/d675832ad842413679dd4a132bbfa3c311057119/015Golden_Curator_Panda%E9%87%91%E9%A6%86%E9%95%BF%E7%86%8A%E7%8C%AB%F0%9F%90%BCBQB/%E9%87%91%E9%A6%86%E9%95%BF%E7%86%8A%E7%8C%AB00270-%E6%84%A3%E4%BD%8F.png",
+    "source_path": "015Golden_Curator_Panda金馆长熊猫🐼BQB/金馆长熊猫00270-愣住.png",
     "source_commit": "d675832ad842413679dd4a132bbfa3c311057119",
-    "source_sha256": "cce41824cef74e7c5559e4df9e854c2642aaffe54200c13a0b86db6fded4afea",
+    "source_sha256": "693c5b9e2d2ea8be101e24f1bf3feb9559a100764c11c18c3de1463c3da84dd3",
     "crop": [
       0,
       0,
-      120,
-      88
+      198,
+      103
     ],
     "source_size": [
-      120,
-      88
+      198,
+      153
     ],
-    "reviewed_source_index": 29,
+    "reviewed_source_index": 73,
     "source_frames": 1,
-    "asset_sha256": "40581da6ee21444aae02f8ff0a860d90d5fdde6630d53a727ecbfb4e890290d0"
+    "asset_sha256": "26f42763818749858ef706874513c4de2c974f3a7d88fcbaad6a06df9668c98e",
+    "erase_rects": [],
+    "faces": [
+      {
+        "box": [
+          50,
+          10,
+          158,
+          99
+        ],
+        "angle": 0
+      }
+    ],
+    "images": 1
   },
   {
     "key": "mantou_duel_026",
     "name": "笑到后仰",
-    "caption": "{name}，别解释了，笑点已经到了。",
     "category": "熊猫头",
     "asset": "026.png",
     "animated": false,
@@ -647,12 +976,24 @@
     ],
     "reviewed_source_index": 30,
     "source_frames": 1,
-    "asset_sha256": "1c0612b21d821ecf7fa0f45bf98e8dc74826816959f52151ba0a5547be54802e"
+    "asset_sha256": "1c0612b21d821ecf7fa0f45bf98e8dc74826816959f52151ba0a5547be54802e",
+    "erase_rects": [],
+    "faces": [
+      {
+        "box": [
+          43,
+          6,
+          174,
+          163
+        ],
+        "angle": 0
+      }
+    ],
+    "images": 1
   },
   {
     "key": "mantou_duel_027",
     "name": "匿名路人",
-    "caption": "{name}，一位路过的网友表示疑惑。",
     "category": "熊猫头",
     "asset": "027.png",
     "animated": false,
@@ -672,12 +1013,34 @@
     ],
     "reviewed_source_index": 31,
     "source_frames": 1,
-    "asset_sha256": "a8a9c6b0c828c4ac14c323978917376e86fba2de93d6b7563e879b1e948d2ccf"
+    "asset_sha256": "a738ddd8f5c843a7f989a8e3c1b9a98b949be9547fdcf54e4320b941e8cfc6a0",
+    "erase_rects": [
+      {
+        "box": [
+          136,
+          20,
+          180,
+          135
+        ],
+        "fill": "white"
+      }
+    ],
+    "faces": [
+      {
+        "box": [
+          42,
+          44,
+          127,
+          125
+        ],
+        "angle": 0
+      }
+    ],
+    "images": 1
   },
   {
     "key": "mantou_duel_028",
     "name": "电话确认",
-    "caption": "{name}，稍等，我确认一下你说的是啥。",
     "category": "熊猫头",
     "asset": "028.png",
     "animated": false,
@@ -697,12 +1060,24 @@
     ],
     "reviewed_source_index": 32,
     "source_frames": 1,
-    "asset_sha256": "b1bb2ee3fff9201193c305176055d2cf3141f1f2d2545dba3d9acd593d5a85c6"
+    "asset_sha256": "b1bb2ee3fff9201193c305176055d2cf3141f1f2d2545dba3d9acd593d5a85c6",
+    "erase_rects": [],
+    "faces": [
+      {
+        "box": [
+          30,
+          10,
+          114,
+          93
+        ],
+        "angle": 0
+      }
+    ],
+    "images": 1
   },
   {
     "key": "mantou_duel_029",
     "name": "表情失控",
-    "caption": "{name}，你再说一遍我缓缓。",
     "category": "熊猫头",
     "asset": "029.png",
     "animated": false,
@@ -722,12 +1097,24 @@
     ],
     "reviewed_source_index": 33,
     "source_frames": 1,
-    "asset_sha256": "8ced4794c50357e18eb4d8046bd802521ccfe6b165378e053708c3b3f36de3f7"
+    "asset_sha256": "8ced4794c50357e18eb4d8046bd802521ccfe6b165378e053708c3b3f36de3f7",
+    "erase_rects": [],
+    "faces": [
+      {
+        "box": [
+          0,
+          24,
+          73,
+          94
+        ],
+        "angle": 0
+      }
+    ],
+    "images": 1
   },
   {
     "key": "mantou_duel_030",
     "name": "游戏优先",
-    "caption": "{name}，你先输出，我先打完这局。",
     "category": "熊猫头",
     "asset": "030.png",
     "animated": false,
@@ -747,12 +1134,34 @@
     ],
     "reviewed_source_index": 34,
     "source_frames": 1,
-    "asset_sha256": "c8c9a412d7da9310ab4e18585c04c2d9a83f00bb89e275dbf442103050403436"
+    "asset_sha256": "363c59c6f9418e20f16554ac9005fb445056f342d06e4eb8d95bfa3d62574bc3",
+    "erase_rects": [
+      {
+        "box": [
+          58,
+          0,
+          120,
+          40
+        ],
+        "fill": "white"
+      }
+    ],
+    "faces": [
+      {
+        "box": [
+          31,
+          16,
+          132,
+          118
+        ],
+        "angle": 0
+      }
+    ],
+    "images": 1
   },
   {
     "key": "mantou_duel_031",
     "name": "活动筋骨",
-    "caption": "{name}，热身结束，现在可以讲重点了。",
     "category": "熊猫头",
     "asset": "031.png",
     "animated": false,
@@ -772,12 +1181,24 @@
     ],
     "reviewed_source_index": 39,
     "source_frames": 1,
-    "asset_sha256": "042d37c92ac85e0657e573bcefa5f1eac890447c1a5878cbbf5b21340ff7356b"
+    "asset_sha256": "042d37c92ac85e0657e573bcefa5f1eac890447c1a5878cbbf5b21340ff7356b",
+    "erase_rects": [],
+    "faces": [
+      {
+        "box": [
+          40,
+          16,
+          96,
+          88
+        ],
+        "angle": 0
+      }
+    ],
+    "images": 1
   },
   {
     "key": "mantou_duel_032",
     "name": "礼貌问号",
-    "caption": "{name}，请问问题到底在哪儿？",
     "category": "熊猫头",
     "asset": "032.png",
     "animated": false,
@@ -797,12 +1218,24 @@
     ],
     "reviewed_source_index": 40,
     "source_frames": 1,
-    "asset_sha256": "7be06b6d602b8d940d8ea273a151f123c1f4d7f3ebbd3e7841b6ad6de698e6cc"
+    "asset_sha256": "7be06b6d602b8d940d8ea273a151f123c1f4d7f3ebbd3e7841b6ad6de698e6cc",
+    "erase_rects": [],
+    "faces": [
+      {
+        "box": [
+          42,
+          41,
+          135,
+          123
+        ],
+        "angle": 0
+      }
+    ],
+    "images": 1
   },
   {
     "key": "mantou_duel_033",
     "name": "停止施法",
-    "caption": "{name}，停止你的逻辑漂移。",
     "category": "熊猫头",
     "asset": "033.png",
     "animated": false,
@@ -822,12 +1255,24 @@
     ],
     "reviewed_source_index": 41,
     "source_frames": 1,
-    "asset_sha256": "2a28ba1bcf0c180bc1b2f8149430d4b3efc6d48d380951c060ee2eedaa28d11a"
+    "asset_sha256": "2a28ba1bcf0c180bc1b2f8149430d4b3efc6d48d380951c060ee2eedaa28d11a",
+    "erase_rects": [],
+    "faces": [
+      {
+        "box": [
+          183,
+          298,
+          653,
+          703
+        ],
+        "angle": 0
+      }
+    ],
+    "images": 1
   },
   {
     "key": "mantou_duel_034",
     "name": "大哥请讲",
-    "caption": "{name}，给你话筒，你继续。",
     "category": "熊猫头",
     "asset": "034.png",
     "animated": false,
@@ -837,7 +1282,7 @@
     "source_sha256": "be86349e82f834934d7a313605a5028bc231e3413a57dbe19ea52687f56193f6",
     "crop": [
       0,
-      0,
+      95,
       240,
       240
     ],
@@ -847,12 +1292,24 @@
     ],
     "reviewed_source_index": 44,
     "source_frames": 1,
-    "asset_sha256": "5a05a5a39f7fad6408d2ae5eca5014833a081dcb0b083b020becbd1cd05dc058"
+    "asset_sha256": "fbd2e73aa7143c4b5af6711cbc157c0187cc3997fbffcad388ea58b7ba9a9c73",
+    "erase_rects": [],
+    "faces": [
+      {
+        "box": [
+          108,
+          25,
+          206,
+          128
+        ],
+        "angle": 0
+      }
+    ],
+    "images": 1
   },
   {
     "key": "mantou_duel_035",
     "name": "先推一把",
-    "caption": "{name}，先把话题推回正轨。",
     "category": "熊猫头",
     "asset": "035.png",
     "animated": false,
@@ -872,12 +1329,24 @@
     ],
     "reviewed_source_index": 46,
     "source_frames": 1,
-    "asset_sha256": "baa7066234b1758c99ba0103152a1ffd3294b4a11139dfbe496ce366a742656c"
+    "asset_sha256": "baa7066234b1758c99ba0103152a1ffd3294b4a11139dfbe496ce366a742656c",
+    "erase_rects": [],
+    "faces": [
+      {
+        "box": [
+          17,
+          21,
+          130,
+          116
+        ],
+        "angle": 0
+      }
+    ],
+    "images": 1
   },
   {
     "key": "mantou_duel_036",
     "name": "老实听讲",
-    "caption": "{name}，我很老实，你别糊弄我。",
     "category": "熊猫头",
     "asset": "036.png",
     "animated": false,
@@ -889,7 +1358,7 @@
       0,
       0,
       720,
-      702
+      620
     ],
     "source_size": [
       720,
@@ -897,12 +1366,24 @@
     ],
     "reviewed_source_index": 47,
     "source_frames": 1,
-    "asset_sha256": "e9eb07497185d5ce3f4560ac5b6b72e49b167bf3b482cab67629df56a37ca368"
+    "asset_sha256": "533bf743a84f942b53a8086373b78c41e166b19840f74173358e394386d26b63",
+    "erase_rects": [],
+    "faces": [
+      {
+        "box": [
+          190,
+          108,
+          609,
+          561
+        ],
+        "angle": 0
+      }
+    ],
+    "images": 1
   },
   {
     "key": "mantou_duel_037",
     "name": "摸鱼吃瓜",
-    "caption": "{name}，我只是来摸鱼，不是来做阅读理解。",
     "category": "熊猫头",
     "asset": "037.png",
     "animated": false,
@@ -914,7 +1395,7 @@
       0,
       0,
       128,
-      104
+      79
     ],
     "source_size": [
       128,
@@ -922,12 +1403,24 @@
     ],
     "reviewed_source_index": 48,
     "source_frames": 1,
-    "asset_sha256": "ccb9fb2b59f38a744b6e1be011edcb202dfba1cb19dc518d1e0e93ca3c9f1d2c"
+    "asset_sha256": "f64d7c749a74f28b70f052d0b1f9a40f64167dd46c1b4d3d4f198934272e28fc",
+    "erase_rects": [],
+    "faces": [
+      {
+        "box": [
+          51,
+          10,
+          114,
+          61
+        ],
+        "angle": 0
+      }
+    ],
+    "images": 1
   },
   {
     "key": "mantou_duel_038",
     "name": "指向重点",
-    "caption": "{name}，重点在那边，你看反了。",
     "category": "熊猫头",
     "asset": "038.png",
     "animated": false,
@@ -947,12 +1440,24 @@
     ],
     "reviewed_source_index": 50,
     "source_frames": 1,
-    "asset_sha256": "f77c91aa8567ebefd9b7e727bcae14e6f01c9486120e26700a5e9ee4638e13a4"
+    "asset_sha256": "f77c91aa8567ebefd9b7e727bcae14e6f01c9486120e26700a5e9ee4638e13a4",
+    "erase_rects": [],
+    "faces": [
+      {
+        "box": [
+          70,
+          18,
+          230,
+          231
+        ],
+        "angle": 0
+      }
+    ],
+    "images": 1
   },
   {
     "key": "mantou_duel_039",
     "name": "让我想想",
-    "caption": "{name}，这个逻辑需要重启一下。",
     "category": "熊猫头",
     "asset": "039.png",
     "animated": false,
@@ -972,12 +1477,24 @@
     ],
     "reviewed_source_index": 51,
     "source_frames": 1,
-    "asset_sha256": "ee576fb575e6e320fdb41a7804047aabf9163e675db5d6bd00cdf29146e91ace"
+    "asset_sha256": "ee576fb575e6e320fdb41a7804047aabf9163e675db5d6bd00cdf29146e91ace",
+    "erase_rects": [],
+    "faces": [
+      {
+        "box": [
+          23,
+          10,
+          55,
+          45
+        ],
+        "angle": 0
+      }
+    ],
+    "images": 1
   },
   {
     "key": "mantou_duel_040",
     "name": "路边看客",
-    "caption": "{name}，我先蹲这儿看后续。",
     "category": "熊猫头",
     "asset": "040.png",
     "animated": false,
@@ -997,12 +1514,24 @@
     ],
     "reviewed_source_index": 54,
     "source_frames": 1,
-    "asset_sha256": "1b75c51a81d96695831d4964bc7ae9eea594dc452ea6c257c78ae9b8fde44f5f"
+    "asset_sha256": "1b75c51a81d96695831d4964bc7ae9eea594dc452ea6c257c78ae9b8fde44f5f",
+    "erase_rects": [],
+    "faces": [
+      {
+        "box": [
+          32,
+          14,
+          95,
+          74
+        ],
+        "angle": 0
+      }
+    ],
+    "images": 1
   },
   {
     "key": "mantou_duel_041",
     "name": "慢走不送",
-    "caption": "{name}，这套说法先放旁边吧。",
     "category": "熊猫头",
     "asset": "041.png",
     "animated": false,
@@ -1022,12 +1551,34 @@
     ],
     "reviewed_source_index": 57,
     "source_frames": 1,
-    "asset_sha256": "400997792f283b9ee268fa1d8abebfd62a31a6822c7ef0408e616b883d9886a4"
+    "asset_sha256": "5947bf84ae6933ada42d951ec0a5a66c164c4a1e22c79c0c1eb07c18f988cca9",
+    "erase_rects": [
+      {
+        "box": [
+          73,
+          20,
+          100,
+          72
+        ],
+        "fill": "white"
+      }
+    ],
+    "faces": [
+      {
+        "box": [
+          21,
+          6,
+          75,
+          58
+        ],
+        "angle": 0
+      }
+    ],
+    "images": 1
   },
   {
     "key": "mantou_duel_042",
     "name": "脸红不是认输",
-    "caption": "{name}，我脸红是憋笑，不是认输。",
     "category": "熊猫头",
     "asset": "042.png",
     "animated": false,
@@ -1047,12 +1598,24 @@
     ],
     "reviewed_source_index": 58,
     "source_frames": 1,
-    "asset_sha256": "6c0c9e26cc1eeb4710e3ff375599919f3de590e39f58495923617bbe523046cc"
+    "asset_sha256": "6c0c9e26cc1eeb4710e3ff375599919f3de590e39f58495923617bbe523046cc",
+    "erase_rects": [],
+    "faces": [
+      {
+        "box": [
+          9,
+          13,
+          72,
+          85
+        ],
+        "angle": 0
+      }
+    ],
+    "images": 1
   },
   {
     "key": "mantou_duel_043",
     "name": "想都别想",
-    "caption": "{name}，想让我认同，先把理由补齐。",
     "category": "熊猫头",
     "asset": "043.png",
     "animated": false,
@@ -1072,12 +1635,24 @@
     ],
     "reviewed_source_index": 59,
     "source_frames": 1,
-    "asset_sha256": "dab77fc44e8639a80e90d47412ee20cd6fb84b132eb9a3efb19015283e2233da"
+    "asset_sha256": "dab77fc44e8639a80e90d47412ee20cd6fb84b132eb9a3efb19015283e2233da",
+    "erase_rects": [],
+    "faces": [
+      {
+        "box": [
+          22,
+          6,
+          113,
+          93
+        ],
+        "angle": 0
+      }
+    ],
+    "images": 1
   },
   {
     "key": "mantou_duel_044",
     "name": "大笑一场",
-    "caption": "{name}，谢谢你承包今天的笑点。",
     "category": "熊猫头",
     "asset": "044.png",
     "animated": false,
@@ -1087,7 +1662,7 @@
     "source_sha256": "740a11bb5277286ac17bb24416d065d3bfb765a55369dfd36fdbff4478f1afb5",
     "crop": [
       0,
-      0,
+      16,
       70,
       64
     ],
@@ -1097,12 +1672,34 @@
     ],
     "reviewed_source_index": 60,
     "source_frames": 1,
-    "asset_sha256": "86e63e9c099ad840349c0d4ae542ce20151f9377f19362927890e814d4687b75"
+    "asset_sha256": "4a77ff59d249b7820b04ea63d67e5a3a9959aefb132640a75d8161b6fb3352c2",
+    "erase_rects": [
+      {
+        "box": [
+          0,
+          0,
+          70,
+          23
+        ],
+        "fill": "white"
+      }
+    ],
+    "faces": [
+      {
+        "box": [
+          14,
+          5,
+          56,
+          39
+        ],
+        "angle": 0
+      }
+    ],
+    "images": 1
   },
   {
     "key": "mantou_duel_045",
     "name": "你懂我懂",
-    "caption": "{name}，懂你意思，不代表同意。",
     "category": "熊猫头",
     "asset": "045.png",
     "animated": false,
@@ -1122,12 +1719,33 @@
     ],
     "reviewed_source_index": 63,
     "source_frames": 1,
-    "asset_sha256": "71c5c8426ff9d23475b4306140600c922bb3ba2cb19610a781e48d928421fce7"
+    "asset_sha256": "71c5c8426ff9d23475b4306140600c922bb3ba2cb19610a781e48d928421fce7",
+    "erase_rects": [],
+    "faces": [
+      {
+        "box": [
+          40,
+          15,
+          154,
+          148
+        ],
+        "angle": 0
+      },
+      {
+        "box": [
+          320,
+          15,
+          426,
+          148
+        ],
+        "angle": 0
+      }
+    ],
+    "images": 2
   },
   {
     "key": "mantou_duel_046",
     "name": "行了行了",
-    "caption": "{name}，可以了，这段我会背了。",
     "category": "熊猫头",
     "asset": "046.png",
     "animated": false,
@@ -1137,7 +1755,7 @@
     "source_sha256": "e338d3eb3f62aa74158f4c4fd3c36079980f5854dd3b80b310ec564b4fdb0a8a",
     "crop": [
       0,
-      0,
+      29,
       198,
       174
     ],
@@ -1147,12 +1765,34 @@
     ],
     "reviewed_source_index": 64,
     "source_frames": 1,
-    "asset_sha256": "2544dad0d9ab858a2f917d5dc191ea23374e402b12184a9ebce44a73f407790f"
+    "asset_sha256": "64e3d99b68d33f0f0187d0ea33cef556e645c4fb93f60f00d27ac46852123697",
+    "erase_rects": [
+      {
+        "box": [
+          0,
+          0,
+          198,
+          40
+        ],
+        "fill": "white"
+      }
+    ],
+    "faces": [
+      {
+        "box": [
+          33,
+          10,
+          150,
+          122
+        ],
+        "angle": 0
+      }
+    ],
+    "images": 1
   },
   {
     "key": "mantou_duel_047",
     "name": "认真旁听",
-    "caption": "{name}，我很认真地在等证据。",
     "category": "熊猫头",
     "asset": "047.png",
     "animated": false,
@@ -1172,12 +1812,34 @@
     ],
     "reviewed_source_index": 66,
     "source_frames": 1,
-    "asset_sha256": "a7c4b9f8a66c033d49682409f81df98cad7ab62db1bfce2a3e7018236c0c13d1"
+    "asset_sha256": "3ff2a03ac9e1b87bc652bd5de2d4aac710703100cd30657b05778c5bd81dcd04",
+    "erase_rects": [
+      {
+        "box": [
+          35,
+          148,
+          160,
+          198
+        ],
+        "fill": "white"
+      }
+    ],
+    "faces": [
+      {
+        "box": [
+          46,
+          45,
+          158,
+          143
+        ],
+        "angle": 0
+      }
+    ],
+    "images": 1
   },
   {
     "key": "mantou_duel_048",
     "name": "有戏看了",
-    "caption": "{name}，你俩继续，我把板凳搬来。",
     "category": "熊猫头",
     "asset": "048.png",
     "animated": false,
@@ -1189,7 +1851,7 @@
       0,
       0,
       204,
-      118
+      88
     ],
     "source_size": [
       204,
@@ -1197,12 +1859,33 @@
     ],
     "reviewed_source_index": 67,
     "source_frames": 1,
-    "asset_sha256": "03c4f97f7a715ca5428bbd60f3b4c73f3066312421a62d23423450d3dcd264b1"
+    "asset_sha256": "d1be5d0d11f575f12da6142e7169d90c171ffd5a521e3ed979482e1eec79d2ef",
+    "erase_rects": [],
+    "faces": [
+      {
+        "box": [
+          37,
+          13,
+          67,
+          56
+        ],
+        "angle": 0
+      },
+      {
+        "box": [
+          145,
+          13,
+          175,
+          56
+        ],
+        "angle": 0
+      }
+    ],
+    "images": 2
   },
   {
     "key": "mantou_duel_049",
     "name": "酸一下先",
-    "caption": "{name}，这水平让我先酸一下。",
     "category": "熊猫头",
     "asset": "049.png",
     "animated": false,
@@ -1222,12 +1905,24 @@
     ],
     "reviewed_source_index": 68,
     "source_frames": 1,
-    "asset_sha256": "6d9a370f7c15165a6c06ced81dd6b56c5667d265482567aeb4e0b6175f401633"
+    "asset_sha256": "6d9a370f7c15165a6c06ced81dd6b56c5667d265482567aeb4e0b6175f401633",
+    "erase_rects": [],
+    "faces": [
+      {
+        "box": [
+          21,
+          28,
+          91,
+          84
+        ],
+        "angle": 0
+      }
+    ],
+    "images": 1
   },
   {
     "key": "mantou_duel_050",
     "name": "成熟一点",
-    "caption": "{name}，我们试着成熟地抬一次杠。",
     "category": "熊猫头",
     "asset": "050.png",
     "animated": false,
@@ -1247,12 +1942,24 @@
     ],
     "reviewed_source_index": 69,
     "source_frames": 1,
-    "asset_sha256": "cbd62a1e8956ae4c1dc1a432d792fe39b579f2deeb0d78cd1dda40fba88c3052"
+    "asset_sha256": "cbd62a1e8956ae4c1dc1a432d792fe39b579f2deeb0d78cd1dda40fba88c3052",
+    "erase_rects": [],
+    "faces": [
+      {
+        "box": [
+          47,
+          33,
+          216,
+          164
+        ],
+        "angle": 0
+      }
+    ],
+    "images": 1
   },
   {
     "key": "mantou_duel_051",
     "name": "随手附和",
-    "caption": "{name}，好棒好棒，论据再来一个。",
     "category": "白色小人",
     "asset": "051.png",
     "animated": false,
@@ -1262,7 +1969,7 @@
     "source_sha256": "a2767e3f3187cee124d8888078b2a837c9afa1a95ca85d8ba2b3982557ddc5e8",
     "crop": [
       0,
-      0,
+      23,
       71,
       81
     ],
@@ -1272,12 +1979,34 @@
     ],
     "reviewed_source_index": 100,
     "source_frames": 1,
-    "asset_sha256": "8c3225fbe50e8b8dce90126037bee2edd9ea33c03e46f19899947704c7ca5628"
+    "asset_sha256": "6bae45e5a49e1d2c30ae1051450b2a41a764e4754cf6ee3f80a31740f0989691",
+    "erase_rects": [
+      {
+        "box": [
+          0,
+          0,
+          71,
+          29
+        ],
+        "fill": "white"
+      }
+    ],
+    "faces": [
+      {
+        "box": [
+          19,
+          11,
+          54,
+          50
+        ],
+        "angle": 0
+      }
+    ],
+    "images": 1
   },
   {
     "key": "mantou_duel_052",
     "name": "张嘴震惊",
-    "caption": "{name}，我先把嘴合上再回你。",
     "category": "白色小人",
     "asset": "052.png",
     "animated": false,
@@ -1297,12 +2026,24 @@
     ],
     "reviewed_source_index": 106,
     "source_frames": 1,
-    "asset_sha256": "e00c13f408c6386812ccc9f2f0c78a16e8de391309f70a85807ee5fe688eb75a"
+    "asset_sha256": "e00c13f408c6386812ccc9f2f0c78a16e8de391309f70a85807ee5fe688eb75a",
+    "erase_rects": [],
+    "faces": [
+      {
+        "box": [
+          79,
+          15,
+          365,
+          261
+        ],
+        "angle": 0
+      }
+    ],
+    "images": 1
   },
   {
     "key": "mantou_duel_053",
     "name": "自由发挥",
-    "caption": "{name}，请开始你的自由发挥。",
     "category": "白色小人",
     "asset": "053.png",
     "animated": false,
@@ -1322,12 +2063,24 @@
     ],
     "reviewed_source_index": 109,
     "source_frames": 1,
-    "asset_sha256": "bd589d74b73afa0fa9dfabcac4cc8743646bdb910ec08ff645f02a13503543d5"
+    "asset_sha256": "bd589d74b73afa0fa9dfabcac4cc8743646bdb910ec08ff645f02a13503543d5",
+    "erase_rects": [],
+    "faces": [
+      {
+        "box": [
+          58,
+          14,
+          144,
+          101
+        ],
+        "angle": 0
+      }
+    ],
+    "images": 1
   },
   {
     "key": "mantou_duel_054",
     "name": "灵魂追问",
-    "caption": "{name}，然后呢？这就完了？",
     "category": "白色小人",
     "asset": "054.png",
     "animated": false,
@@ -1347,12 +2100,24 @@
     ],
     "reviewed_source_index": 111,
     "source_frames": 1,
-    "asset_sha256": "a1b58ab46ea36e56c4478cbb266c67e64c7f15399a1598b67280058d9a18086b"
+    "asset_sha256": "a1b58ab46ea36e56c4478cbb266c67e64c7f15399a1598b67280058d9a18086b",
+    "erase_rects": [],
+    "faces": [
+      {
+        "box": [
+          79,
+          49,
+          370,
+          306
+        ],
+        "angle": 0
+      }
+    ],
+    "images": 1
   },
   {
     "key": "mantou_duel_055",
     "name": "好好说话",
-    "caption": "{name}，好好说话，先别急。",
     "category": "白色小人",
     "asset": "055.png",
     "animated": false,
@@ -1372,12 +2137,24 @@
     ],
     "reviewed_source_index": 113,
     "source_frames": 1,
-    "asset_sha256": "3431b5d54194a80e2b2e582dce509fd97a27b35568c854cc41cbaa4cf36d5c3f"
+    "asset_sha256": "3431b5d54194a80e2b2e582dce509fd97a27b35568c854cc41cbaa4cf36d5c3f",
+    "erase_rects": [],
+    "faces": [
+      {
+        "box": [
+          79,
+          49,
+          361,
+          271
+        ],
+        "angle": 0
+      }
+    ],
+    "images": 1
   },
   {
     "key": "mantou_duel_056",
     "name": "吸管看戏",
-    "caption": "{name}，你说你的，我吸我的。",
     "category": "白色小人",
     "asset": "056.png",
     "animated": false,
@@ -1397,12 +2174,24 @@
     ],
     "reviewed_source_index": 114,
     "source_frames": 1,
-    "asset_sha256": "54503586db785632f140d901088381a2adaa3fcb4daf0a59696627749a2f02a0"
+    "asset_sha256": "54503586db785632f140d901088381a2adaa3fcb4daf0a59696627749a2f02a0",
+    "erase_rects": [],
+    "faces": [
+      {
+        "box": [
+          88,
+          100,
+          324,
+          336
+        ],
+        "angle": 0
+      }
+    ],
+    "images": 1
   },
   {
     "key": "mantou_duel_057",
     "name": "正面迎战",
-    "caption": "{name}，来，我们就事论事。",
     "category": "白色小人",
     "asset": "057.png",
     "animated": false,
@@ -1412,7 +2201,7 @@
     "source_sha256": "2ede787c89994138984c5891cadb95cc4f4749ef585c7b43780f6db3a7c68c4c",
     "crop": [
       0,
-      0,
+      34,
       200,
       140
     ],
@@ -1422,12 +2211,34 @@
     ],
     "reviewed_source_index": 115,
     "source_frames": 1,
-    "asset_sha256": "ff4978adcadf9e1efbb62b23c54b4be4a87a788523867adae90ba14138050756"
+    "asset_sha256": "0f99bfecc6957512671808c887d5207105a66b17e281642605dd4669f054e504",
+    "erase_rects": [
+      {
+        "box": [
+          0,
+          0,
+          200,
+          54
+        ],
+        "fill": "white"
+      }
+    ],
+    "faces": [
+      {
+        "box": [
+          46,
+          13,
+          156,
+          93
+        ],
+        "angle": 0
+      }
+    ],
+    "images": 1
   },
   {
     "key": "mantou_duel_058",
     "name": "无辜微笑",
-    "caption": "{name}，我只是问问，你怎么急了？",
     "category": "白色小人",
     "asset": "058.png",
     "animated": false,
@@ -1447,12 +2258,24 @@
     ],
     "reviewed_source_index": 116,
     "source_frames": 1,
-    "asset_sha256": "36c75a9ca8c393fa70873ca0a2fa3ae5e275fe288fe4557d562cd96f3a718d15"
+    "asset_sha256": "36c75a9ca8c393fa70873ca0a2fa3ae5e275fe288fe4557d562cd96f3a718d15",
+    "erase_rects": [],
+    "faces": [
+      {
+        "box": [
+          70,
+          34,
+          374,
+          256
+        ],
+        "angle": 0
+      }
+    ],
+    "images": 1
   },
   {
     "key": "mantou_duel_059",
     "name": "长草旁听",
-    "caption": "{name}，等你讲到重点，我都发芽了。",
     "category": "白色小人",
     "asset": "059.png",
     "animated": false,
@@ -1472,12 +2295,24 @@
     ],
     "reviewed_source_index": 117,
     "source_frames": 1,
-    "asset_sha256": "c52fba5abec47ac800db4affff0e5f7d43cb9493a6cdddf769097b68449448e3"
+    "asset_sha256": "c52fba5abec47ac800db4affff0e5f7d43cb9493a6cdddf769097b68449448e3",
+    "erase_rects": [],
+    "faces": [
+      {
+        "box": [
+          88,
+          116,
+          328,
+          340
+        ],
+        "angle": 0
+      }
+    ],
+    "images": 1
   },
   {
     "key": "mantou_duel_060",
     "name": "猫式回怼",
-    "caption": "{name}，听到了，但我选择喵一下。",
     "category": "白色小人",
     "asset": "060.png",
     "animated": false,
@@ -1497,12 +2332,24 @@
     ],
     "reviewed_source_index": 118,
     "source_frames": 1,
-    "asset_sha256": "51b7382a6f6be00af99d73bf2d47225edc4a423388cc42c2014ccd270b0f863c"
+    "asset_sha256": "51b7382a6f6be00af99d73bf2d47225edc4a423388cc42c2014ccd270b0f863c",
+    "erase_rects": [],
+    "faces": [
+      {
+        "box": [
+          68,
+          73,
+          344,
+          297
+        ],
+        "angle": 0
+      }
+    ],
+    "images": 1
   },
   {
     "key": "mantou_duel_061",
     "name": "礼貌看破",
-    "caption": "{name}，看破不说破是我的修养。",
     "category": "白色小人",
     "asset": "061.png",
     "animated": false,
@@ -1522,12 +2369,24 @@
     ],
     "reviewed_source_index": 119,
     "source_frames": 1,
-    "asset_sha256": "f44c0da223f702a283fc97fa0ce3e5583d1b895174188bdc6a94e6923d9bd197"
+    "asset_sha256": "f44c0da223f702a283fc97fa0ce3e5583d1b895174188bdc6a94e6923d9bd197",
+    "erase_rects": [],
+    "faces": [
+      {
+        "box": [
+          36,
+          40,
+          160,
+          168
+        ],
+        "angle": 0
+      }
+    ],
+    "images": 1
   },
   {
     "key": "mantou_duel_062",
     "name": "我不理解",
-    "caption": "{name}，这个脑回路我暂时不理解。",
     "category": "白色小人",
     "asset": "062.png",
     "animated": false,
@@ -1547,12 +2406,24 @@
     ],
     "reviewed_source_index": 121,
     "source_frames": 1,
-    "asset_sha256": "42384bbc5b8bc2f688d9e2c22a8f68fd606121533208d8d383e3f7bc00ff57d0"
+    "asset_sha256": "42384bbc5b8bc2f688d9e2c22a8f68fd606121533208d8d383e3f7bc00ff57d0",
+    "erase_rects": [],
+    "faces": [
+      {
+        "box": [
+          70,
+          43,
+          370,
+          306
+        ],
+        "angle": 0
+      }
+    ],
+    "images": 1
   },
   {
     "key": "mantou_duel_063",
     "name": "认真结领带",
-    "caption": "{name}，正式一点，请拿出证据。",
     "category": "白色小人",
     "asset": "063.png",
     "animated": false,
@@ -1572,12 +2443,24 @@
     ],
     "reviewed_source_index": 123,
     "source_frames": 1,
-    "asset_sha256": "ecf47a74613ab13bf9ad500789efabae7a2bd210f795a6424542c00edc4259fa"
+    "asset_sha256": "ecf47a74613ab13bf9ad500789efabae7a2bd210f795a6424542c00edc4259fa",
+    "erase_rects": [],
+    "faces": [
+      {
+        "box": [
+          76,
+          108,
+          332,
+          344
+        ],
+        "angle": 0
+      }
+    ],
+    "images": 1
   },
   {
     "key": "mantou_duel_064",
     "name": "流泪发言",
-    "caption": "{name}，你再说我真的要笑哭了。",
     "category": "白色小人",
     "asset": "064.png",
     "animated": false,
@@ -1597,12 +2480,24 @@
     ],
     "reviewed_source_index": 124,
     "source_frames": 1,
-    "asset_sha256": "1daa096da8a6f93b93d68121f052880eca9e01cf58bc2637546a213917927110"
+    "asset_sha256": "1daa096da8a6f93b93d68121f052880eca9e01cf58bc2637546a213917927110",
+    "erase_rects": [],
+    "faces": [
+      {
+        "box": [
+          52,
+          11,
+          148,
+          111
+        ],
+        "angle": 0
+      }
+    ],
+    "images": 1
   },
   {
     "key": "mantou_duel_065",
     "name": "瓜皮护体",
-    "caption": "{name}，我戴好瓜皮再听你说。",
     "category": "白色小人",
     "asset": "065.png",
     "animated": false,
@@ -1622,12 +2517,24 @@
     ],
     "reviewed_source_index": 125,
     "source_frames": 1,
-    "asset_sha256": "8b90806c5161a4e1bf4659ba69fef7530ad26b6e69099bfdb363634536f27145"
+    "asset_sha256": "8b90806c5161a4e1bf4659ba69fef7530ad26b6e69099bfdb363634536f27145",
+    "erase_rects": [],
+    "faces": [
+      {
+        "box": [
+          80,
+          116,
+          336,
+          352
+        ],
+        "angle": 0
+      }
+    ],
+    "images": 1
   },
   {
     "key": "mantou_duel_066",
     "name": "欲言又止",
-    "caption": "{name}，我有一句话不知从何说起。",
     "category": "白色小人",
     "asset": "066.png",
     "animated": false,
@@ -1647,12 +2554,24 @@
     ],
     "reviewed_source_index": 127,
     "source_frames": 1,
-    "asset_sha256": "8c7067f223604bb140460b5f74ad805fdb4b24d1de36e3fa77263675520e294b"
+    "asset_sha256": "8c7067f223604bb140460b5f74ad805fdb4b24d1de36e3fa77263675520e294b",
+    "erase_rects": [],
+    "faces": [
+      {
+        "box": [
+          64,
+          100,
+          336,
+          376
+        ],
+        "angle": 0
+      }
+    ],
+    "images": 1
   },
   {
     "key": "mantou_duel_067",
     "name": "花开富贵",
-    "caption": "{name}，我都开花了，你还没讲完。",
     "category": "白色小人",
     "asset": "067.png",
     "animated": false,
@@ -1672,12 +2591,24 @@
     ],
     "reviewed_source_index": 128,
     "source_frames": 1,
-    "asset_sha256": "a2f05e75bd59f163a022e266a6fef478f727cd3e5c6cbba94a726a1ff5b71424"
+    "asset_sha256": "a2f05e75bd59f163a022e266a6fef478f727cd3e5c6cbba94a726a1ff5b71424",
+    "erase_rects": [],
+    "faces": [
+      {
+        "box": [
+          76,
+          132,
+          332,
+          380
+        ],
+        "angle": 0
+      }
+    ],
+    "images": 1
   },
   {
     "key": "mantou_duel_068",
     "name": "自信退场",
-    "caption": "{name}，自信很好，逻辑也带上。",
     "category": "白色小人",
     "asset": "068.png",
     "animated": false,
@@ -1697,12 +2628,24 @@
     ],
     "reviewed_source_index": 131,
     "source_frames": 1,
-    "asset_sha256": "fb5b8057631c7d61189e43a3033be29469c3cd13ef0fa480a270acb357af98a9"
+    "asset_sha256": "fb5b8057631c7d61189e43a3033be29469c3cd13ef0fa480a270acb357af98a9",
+    "erase_rects": [],
+    "faces": [
+      {
+        "box": [
+          46,
+          24,
+          164,
+          142
+        ],
+        "angle": 0
+      }
+    ],
+    "images": 1
   },
   {
     "key": "mantou_duel_069",
     "name": "泪如西湖",
-    "caption": "{name}，这波操作给我整泪目了。",
     "category": "白色小人",
     "asset": "069.png",
     "animated": false,
@@ -1714,7 +2657,7 @@
       0,
       0,
       252,
-      200
+      148
     ],
     "source_size": [
       252,
@@ -1722,12 +2665,24 @@
     ],
     "reviewed_source_index": 138,
     "source_frames": 1,
-    "asset_sha256": "7f6dfacb1a22655b908bf9545f38c79a9663f83fe642f7fa3bd02bb65d360298"
+    "asset_sha256": "84f9a70c0266381312f6a35d1d07498fd29f9a2fd1b95a1c909abc29e2b31eb4",
+    "erase_rects": [],
+    "faces": [
+      {
+        "box": [
+          81,
+          67,
+          184,
+          148
+        ],
+        "angle": 0
+      }
+    ],
+    "images": 1
   },
   {
     "key": "mantou_duel_070",
     "name": "戴好头巾",
-    "caption": "{name}，仪式感拉满，道理也补上。",
     "category": "白色小人",
     "asset": "070.png",
     "animated": false,
@@ -1747,12 +2702,24 @@
     ],
     "reviewed_source_index": 141,
     "source_frames": 1,
-    "asset_sha256": "82a88729eae41a8edebdd2d5750b1b0964545f633291ecd2d6ff0f648a96f9a8"
+    "asset_sha256": "82a88729eae41a8edebdd2d5750b1b0964545f633291ecd2d6ff0f648a96f9a8",
+    "erase_rects": [],
+    "faces": [
+      {
+        "box": [
+          36,
+          28,
+          179,
+          164
+        ],
+        "angle": 0
+      }
+    ],
+    "images": 1
   },
   {
     "key": "mantou_duel_071",
     "name": "路过不服",
-    "caption": "{name}，路过，但有一点不服。",
     "category": "白色小人",
     "asset": "071.png",
     "animated": false,
@@ -1762,7 +2729,7 @@
     "source_sha256": "9dea4512eb90379f8d234d651cf9085cf10bdfa6306d5e11d33b8ea8c04e5b67",
     "crop": [
       0,
-      0,
+      36,
       106,
       162
     ],
@@ -1772,12 +2739,24 @@
     ],
     "reviewed_source_index": 146,
     "source_frames": 1,
-    "asset_sha256": "3f4e2bcb0788122bd247e113c3653e3e6588e5793dbb2d14087e7d13004966a0"
+    "asset_sha256": "e66735fbf14970fcc6daed72dff86016401f2cc31a40fa54500fecc0d32a7c75",
+    "erase_rects": [],
+    "faces": [
+      {
+        "box": [
+          24,
+          8,
+          91,
+          81
+        ],
+        "angle": 0
+      }
+    ],
+    "images": 1
   },
   {
     "key": "mantou_duel_072",
     "name": "问号发芽",
-    "caption": "{name}，问号都快长成树了。",
     "category": "白色小人",
     "asset": "072.png",
     "animated": false,
@@ -1797,12 +2776,24 @@
     ],
     "reviewed_source_index": 156,
     "source_frames": 1,
-    "asset_sha256": "45eaa8b419b212fb2889bace1602f8340faed1eab5a1722c0c5c2107ee5ce0aa"
+    "asset_sha256": "45eaa8b419b212fb2889bace1602f8340faed1eab5a1722c0c5c2107ee5ce0aa",
+    "erase_rects": [],
+    "faces": [
+      {
+        "box": [
+          7,
+          12,
+          53,
+          51
+        ],
+        "angle": 0
+      }
+    ],
+    "images": 1
   },
   {
     "key": "mantou_duel_073",
     "name": "先别上头",
-    "caption": "{name}，先冷静，再解释。",
     "category": "白色小人",
     "asset": "073.png",
     "animated": false,
@@ -1822,12 +2813,24 @@
     ],
     "reviewed_source_index": 164,
     "source_frames": 1,
-    "asset_sha256": "380e7dccc4c78ebb7fae562a66cb4ae2d6224eda57450e2e6b3eafee080d3613"
+    "asset_sha256": "380e7dccc4c78ebb7fae562a66cb4ae2d6224eda57450e2e6b3eafee080d3613",
+    "erase_rects": [],
+    "faces": [
+      {
+        "box": [
+          69,
+          32,
+          237,
+          200
+        ],
+        "angle": 0
+      }
+    ],
+    "images": 1
   },
   {
     "key": "mantou_duel_074",
     "name": "倒着理解",
-    "caption": "{name}，我倒过来看都没看懂。",
     "category": "白色小人",
     "asset": "074.png",
     "animated": false,
@@ -1847,12 +2850,24 @@
     ],
     "reviewed_source_index": 165,
     "source_frames": 1,
-    "asset_sha256": "661d25995742166d5f2fd2b402e6e7fbcb15f2ccf8e0cacc95b2db97ef1b6247"
+    "asset_sha256": "661d25995742166d5f2fd2b402e6e7fbcb15f2ccf8e0cacc95b2db97ef1b6247",
+    "erase_rects": [],
+    "faces": [
+      {
+        "box": [
+          3,
+          12,
+          45,
+          47
+        ],
+        "angle": 180
+      }
+    ],
+    "images": 1
   },
   {
     "key": "mantou_duel_075",
     "name": "火锅旁听",
-    "caption": "{name}，你慢慢说，我锅开了。",
     "category": "白色小人",
     "asset": "075.png",
     "animated": false,
@@ -1872,37 +2887,61 @@
     ],
     "reviewed_source_index": 172,
     "source_frames": 1,
-    "asset_sha256": "25b46f6129ed9b9c79a245757df0c72cad8658ac86ee0b8dc3959eede6c8ea20"
+    "asset_sha256": "25b46f6129ed9b9c79a245757df0c72cad8658ac86ee0b8dc3959eede6c8ea20",
+    "erase_rects": [],
+    "faces": [
+      {
+        "box": [
+          11,
+          13,
+          62,
+          68
+        ],
+        "angle": 0
+      }
+    ],
+    "images": 1
   },
   {
     "key": "mantou_duel_076",
-    "name": "猫爪警告",
-    "caption": "{name}，这只爪子不同意。",
+    "name": "猫猫害羞",
     "category": "猫猫",
     "asset": "076.png",
     "animated": false,
-    "source_url": "https://raw.githubusercontent.com/zhaoolee/ChineseBQB/d675832ad842413679dd4a132bbfa3c311057119/010Cat_%E6%98%AF%E5%96%B5%E6%98%9F%E4%BA%BA%E5%95%A6%F0%9F%90%B1BQB/%E6%98%AF%E5%96%B5%E6%98%9F%E4%BA%BA%E5%95%A600005-%E6%88%91%E4%B8%80%E8%84%9A%E4%B8%AB%E5%AD%90%E8%B8%B9%E6%AD%BB%E4%BD%A0%E7%8C%AB.jpg",
-    "source_path": "010Cat_是喵星人啦🐱BQB/是喵星人啦00005-我一脚丫子踹死你猫.jpg",
+    "source_url": "https://raw.githubusercontent.com/zhaoolee/ChineseBQB/d675832ad842413679dd4a132bbfa3c311057119/010Cat_%E6%98%AF%E5%96%B5%E6%98%9F%E4%BA%BA%E5%95%A6%F0%9F%90%B1BQB/%E6%98%AF%E5%96%B5%E6%98%9F%E4%BA%BA%E5%95%A600025-%E5%AE%B3%E7%BE%9E%E7%8C%AB.png",
+    "source_path": "010Cat_是喵星人啦🐱BQB/是喵星人啦00025-害羞猫.png",
     "source_commit": "d675832ad842413679dd4a132bbfa3c311057119",
-    "source_sha256": "0963044b447ecc365418e7c5498611af7ffbb88a777daefdf3715353c61a4ce1",
+    "source_sha256": "ee1d9ff07c215feb52a40f00f8a705ccb6514686ad738f49e95a8efc7650d00d",
     "crop": [
       0,
       0,
-      750,
-      575
+      617,
+      640
     ],
     "source_size": [
-      750,
-      728
+      617,
+      640
     ],
-    "reviewed_source_index": 181,
+    "reviewed_source_index": 196,
     "source_frames": 1,
-    "asset_sha256": "1d4b09aa6d3b7e9980c1d34066e299f529b2f335462ccc196131680c3b8c9b58"
+    "asset_sha256": "3f8a6411e1eb05b315a38c5d1e8e52f7a1599adef35e655d649b06662643fad5",
+    "erase_rects": [],
+    "faces": [
+      {
+        "box": [
+          43,
+          38,
+          555,
+          544
+        ],
+        "angle": 0
+      }
+    ],
+    "images": 1
   },
   {
     "key": "mantou_duel_077",
     "name": "比划一下",
-    "caption": "{name}，逻辑的缺口大概有这么大。",
     "category": "猫猫",
     "asset": "077.png",
     "animated": false,
@@ -1922,12 +2961,24 @@
     ],
     "reviewed_source_index": 182,
     "source_frames": 1,
-    "asset_sha256": "8d6a09a0c9c128f11101eb5386564a4503fad0f3d1c94a710c5e8a788f090811"
+    "asset_sha256": "8d6a09a0c9c128f11101eb5386564a4503fad0f3d1c94a710c5e8a788f090811",
+    "erase_rects": [],
+    "faces": [
+      {
+        "box": [
+          278,
+          14,
+          831,
+          474
+        ],
+        "angle": 0
+      }
+    ],
+    "images": 1
   },
   {
     "key": "mantou_duel_078",
     "name": "当场凉凉",
-    "caption": "{name}，这理由一出来，我就凉了。",
     "category": "猫猫",
     "asset": "078.png",
     "animated": false,
@@ -1947,12 +2998,24 @@
     ],
     "reviewed_source_index": 183,
     "source_frames": 1,
-    "asset_sha256": "29a62c6641b940e8d1501d5d47775b4226c640209eac20e9a20d05ee8c642ac6"
+    "asset_sha256": "29a62c6641b940e8d1501d5d47775b4226c640209eac20e9a20d05ee8c642ac6",
+    "erase_rects": [],
+    "faces": [
+      {
+        "box": [
+          115,
+          23,
+          641,
+          447
+        ],
+        "angle": 0
+      }
+    ],
+    "images": 1
   },
   {
     "key": "mantou_duel_079",
     "name": "猫猫拒绝",
-    "caption": "{name}，小猫都听不下去了。",
     "category": "猫猫",
     "asset": "079.png",
     "animated": false,
@@ -1972,12 +3035,24 @@
     ],
     "reviewed_source_index": 184,
     "source_frames": 1,
-    "asset_sha256": "a3a74ecf5d635bd4d487b7b23a94355e38a4245c19785b040c7628de04e88406"
+    "asset_sha256": "a3a74ecf5d635bd4d487b7b23a94355e38a4245c19785b040c7628de04e88406",
+    "erase_rects": [],
+    "faces": [
+      {
+        "box": [
+          101,
+          94,
+          540,
+          492
+        ],
+        "angle": 0
+      }
+    ],
+    "images": 1
   },
   {
     "key": "mantou_duel_080",
     "name": "仰头叹气",
-    "caption": "{name}，我先仰望一下天花板。",
     "category": "猫猫",
     "asset": "080.png",
     "animated": false,
@@ -1997,12 +3072,24 @@
     ],
     "reviewed_source_index": 185,
     "source_frames": 1,
-    "asset_sha256": "704fe7fbd6568d90cd01550802c9132deb77f55fe9019ce0adb872d05d58e6b3"
+    "asset_sha256": "704fe7fbd6568d90cd01550802c9132deb77f55fe9019ce0adb872d05d58e6b3",
+    "erase_rects": [],
+    "faces": [
+      {
+        "box": [
+          132,
+          59,
+          559,
+          388
+        ],
+        "angle": 0
+      }
+    ],
+    "images": 1
   },
   {
     "key": "mantou_duel_081",
     "name": "猫猫哭了",
-    "caption": "{name}，别说了，猫猫要哭了。",
     "category": "猫猫",
     "asset": "081.png",
     "animated": false,
@@ -2014,7 +3101,7 @@
       0,
       0,
       750,
-      750
+      445
     ],
     "source_size": [
       750,
@@ -2022,12 +3109,24 @@
     ],
     "reviewed_source_index": 186,
     "source_frames": 1,
-    "asset_sha256": "3281df6d07f4498d7bd2e3fe498c562437cc9bdd4f5c5afc3ccca5a2c385989d"
+    "asset_sha256": "837312d670aaf661af8a3ec7ab965aa481f6513d29a55a5a8779db363c1ec68a",
+    "erase_rects": [],
+    "faces": [
+      {
+        "box": [
+          112,
+          9,
+          638,
+          441
+        ],
+        "angle": 0
+      }
+    ],
+    "images": 1
   },
   {
     "key": "mantou_duel_082",
     "name": "忍住眼泪",
-    "caption": "{name}，我没事，我先缓缓。",
     "category": "猫猫",
     "asset": "082.png",
     "animated": false,
@@ -2037,7 +3136,7 @@
     "source_sha256": "1ced0393360a804d5d0489b047ef50b9d7a2bfa807d5f34a91fa2d2ff0fef1f8",
     "crop": [
       0,
-      0,
+      31,
       130,
       108
     ],
@@ -2047,12 +3146,24 @@
     ],
     "reviewed_source_index": 187,
     "source_frames": 1,
-    "asset_sha256": "94826afe662915b7af694763d6c79d05d6d03c41ceb48dd57a58046e493a0958"
+    "asset_sha256": "4831479f59984f6425b1e05526b7ce95fb21a673090e7682a7c139ca90e92914",
+    "erase_rects": [],
+    "faces": [
+      {
+        "box": [
+          16,
+          5,
+          117,
+          75
+        ],
+        "angle": 0
+      }
+    ],
+    "images": 1
   },
   {
     "key": "mantou_duel_083",
     "name": "牛奶围观",
-    "caption": "{name}，我喝口奶等你讲完。",
     "category": "猫猫",
     "asset": "083.png",
     "animated": false,
@@ -2072,12 +3183,24 @@
     ],
     "reviewed_source_index": 188,
     "source_frames": 1,
-    "asset_sha256": "134b6ec32eb639c4fc76d08add100462a15c003dd5bc795c8697a3d89c282df8"
+    "asset_sha256": "134b6ec32eb639c4fc76d08add100462a15c003dd5bc795c8697a3d89c282df8",
+    "erase_rects": [],
+    "faces": [
+      {
+        "box": [
+          18,
+          3,
+          68,
+          50
+        ],
+        "angle": 0
+      }
+    ],
+    "images": 1
   },
   {
     "key": "mantou_duel_084",
     "name": "橘猫问号",
-    "caption": "{name}，你确定你在说同一件事？",
     "category": "猫猫",
     "asset": "084.png",
     "animated": false,
@@ -2097,12 +3220,24 @@
     ],
     "reviewed_source_index": 189,
     "source_frames": 1,
-    "asset_sha256": "28c530436d460ec47278c3ea399d2500dd8f009f23d7e7b9419397ef6c49b098"
+    "asset_sha256": "28c530436d460ec47278c3ea399d2500dd8f009f23d7e7b9419397ef6c49b098",
+    "erase_rects": [],
+    "faces": [
+      {
+        "box": [
+          61,
+          53,
+          145,
+          140
+        ],
+        "angle": 0
+      }
+    ],
+    "images": 1
   },
   {
     "key": "mantou_duel_085",
     "name": "猫猫退烧",
-    "caption": "{name}，让我冷敷一下再回你。",
     "category": "猫猫",
     "asset": "085.png",
     "animated": false,
@@ -2122,12 +3257,24 @@
     ],
     "reviewed_source_index": 190,
     "source_frames": 1,
-    "asset_sha256": "91ec51d955d2996cf017eb328af9515711262b3b2edb503535a752184c969253"
+    "asset_sha256": "91ec51d955d2996cf017eb328af9515711262b3b2edb503535a752184c969253",
+    "erase_rects": [],
+    "faces": [
+      {
+        "box": [
+          66,
+          301,
+          411,
+          801
+        ],
+        "angle": 0
+      }
+    ],
+    "images": 1
   },
   {
     "key": "mantou_duel_086",
     "name": "皮一下先",
-    "caption": "{name}，你是不是又在皮？",
     "category": "猫猫",
     "asset": "086.png",
     "animated": false,
@@ -2139,7 +3286,7 @@
       0,
       0,
       640,
-      538
+      418
     ],
     "source_size": [
       640,
@@ -2147,12 +3294,24 @@
     ],
     "reviewed_source_index": 191,
     "source_frames": 1,
-    "asset_sha256": "e272e110af804725ffe0fc98a66809da07ec5529dfc792be6462683fcffe78aa"
+    "asset_sha256": "cbfb99a145890d69350e2499c47764eab5a3a9a2c38f8ad45693ede2f30d6e55",
+    "erase_rects": [],
+    "faces": [
+      {
+        "box": [
+          64,
+          79,
+          480,
+          405
+        ],
+        "angle": 0
+      }
+    ],
+    "images": 1
   },
   {
     "key": "mantou_duel_087",
     "name": "喵喵无语",
-    "caption": "{name}，喵听了都沉默。",
     "category": "猫猫",
     "asset": "087.png",
     "animated": false,
@@ -2164,7 +3323,7 @@
       0,
       0,
       144,
-      150
+      117
     ],
     "source_size": [
       144,
@@ -2172,12 +3331,24 @@
     ],
     "reviewed_source_index": 192,
     "source_frames": 1,
-    "asset_sha256": "b3f852dc663d278aedf52d01c6bdb1f375e9d24e3b28602cccf81feb055df10f"
+    "asset_sha256": "38362cffa75aec5d7e30a2480747549d91ddd545631bf8e3da386b91c175a2de",
+    "erase_rects": [],
+    "faces": [
+      {
+        "box": [
+          14,
+          14,
+          134,
+          115
+        ],
+        "angle": 0
+      }
+    ],
+    "images": 1
   },
   {
     "key": "mantou_duel_088",
     "name": "看向远方",
-    "caption": "{name}，我看看远方，眼神先休息一下。",
     "category": "猫猫",
     "asset": "088.png",
     "animated": false,
@@ -2197,37 +3368,61 @@
     ],
     "reviewed_source_index": 193,
     "source_frames": 1,
-    "asset_sha256": "a75d15936b13804cabd52779509550a45dabb0903d91765941da9ac7f9d1c300"
+    "asset_sha256": "a75d15936b13804cabd52779509550a45dabb0903d91765941da9ac7f9d1c300",
+    "erase_rects": [],
+    "faces": [
+      {
+        "box": [
+          371,
+          145,
+          471,
+          281
+        ],
+        "angle": 0
+      }
+    ],
+    "images": 1
   },
   {
     "key": "mantou_duel_089",
-    "name": "背对争论",
-    "caption": "{name}，猫猫决定不参与这轮讨论。",
+    "name": "猫猫贴贴",
     "category": "猫猫",
     "asset": "089.png",
     "animated": false,
-    "source_url": "https://raw.githubusercontent.com/zhaoolee/ChineseBQB/d675832ad842413679dd4a132bbfa3c311057119/010Cat_%E6%98%AF%E5%96%B5%E6%98%9F%E4%BA%BA%E5%95%A6%F0%9F%90%B1BQB/%E6%98%AF%E5%96%B5%E6%98%9F%E4%BA%BA%E5%95%A600022-%E5%90%83%E5%B1%81%E7%8C%AB.png",
-    "source_path": "010Cat_是喵星人啦🐱BQB/是喵星人啦00022-吃屁猫.png",
+    "source_url": "https://raw.githubusercontent.com/zhaoolee/ChineseBQB/d675832ad842413679dd4a132bbfa3c311057119/010Cat_%E6%98%AF%E5%96%B5%E6%98%9F%E4%BA%BA%E5%95%A6%F0%9F%90%B1BQB/%E6%98%AF%E5%96%B5%E6%98%9F%E4%BA%BA%E5%95%A600024-%E7%88%B1%E5%BF%83%E7%8C%AB.jpg",
+    "source_path": "010Cat_是喵星人啦🐱BQB/是喵星人啦00024-爱心猫.jpg",
     "source_commit": "d675832ad842413679dd4a132bbfa3c311057119",
-    "source_sha256": "358a5096344f6ab63cb774fe4cf71fddeed6e36891c26f7c1a80fb665a610a96",
+    "source_sha256": "bcde8c1d448960a126fca5b1b8299d1aa14571d350273dcc1b20f5147a6d4218",
     "crop": [
       0,
       0,
       640,
-      307
+      640
     ],
     "source_size": [
       640,
-      472
+      640
     ],
-    "reviewed_source_index": 194,
+    "reviewed_source_index": 195,
     "source_frames": 1,
-    "asset_sha256": "030aa6fc40709ec866224ad22244b81bbc681320af198d0d71037f80ceeea6a6"
+    "asset_sha256": "845d6930c6b929cdcdc52424acd0932142c50dd0674cdc3463fc10682364049b",
+    "erase_rects": [],
+    "faces": [
+      {
+        "box": [
+          115,
+          96,
+          531,
+          486
+        ],
+        "angle": 0
+      }
+    ],
+    "images": 1
   },
   {
     "key": "mantou_duel_090",
     "name": "猫猫借过",
-    "caption": "{name}，借过一下，让逻辑先走。",
     "category": "猫猫",
     "asset": "090.png",
     "animated": false,
@@ -2247,12 +3442,24 @@
     ],
     "reviewed_source_index": 197,
     "source_frames": 1,
-    "asset_sha256": "23f95a7eefb9269a75e0a408cd92ec0c080210507d3998459173cd1d7b4a47ce"
+    "asset_sha256": "23f95a7eefb9269a75e0a408cd92ec0c080210507d3998459173cd1d7b4a47ce",
+    "erase_rects": [],
+    "faces": [
+      {
+        "box": [
+          19,
+          11,
+          53,
+          43
+        ],
+        "angle": 0
+      }
+    ],
+    "images": 1
   },
   {
     "key": "mantou_duel_091",
     "name": "敲桌发言",
-    "caption": "{name}，先听我把这句说完。",
     "category": "动态回怼",
     "asset": "091.gif",
     "animated": true,
@@ -2272,12 +3479,24 @@
     ],
     "reviewed_source_index": 200,
     "source_frames": 2,
-    "asset_sha256": "f317e619c6817358b0b535f72b3828bce40ab6276f53034eac184d55404b580f"
+    "asset_sha256": "f317e619c6817358b0b535f72b3828bce40ab6276f53034eac184d55404b580f",
+    "erase_rects": [],
+    "faces": [
+      {
+        "box": [
+          298,
+          125,
+          787,
+          634
+        ],
+        "angle": 0
+      }
+    ],
+    "images": 1
   },
   {
     "key": "mantou_duel_092",
     "name": "白底回敬",
-    "caption": "{name}，你这图，年代感有点足。",
     "category": "熊猫头",
     "asset": "092.png",
     "animated": false,
@@ -2289,7 +3508,7 @@
       0,
       0,
       480,
-      481
+      330
     ],
     "source_size": [
       480,
@@ -2297,12 +3516,24 @@
     ],
     "reviewed_source_index": 201,
     "source_frames": 1,
-    "asset_sha256": "df1da52c710c50ab3a379932880ae5a1681b4ca3f29096265d7733f8d9f5a176"
+    "asset_sha256": "1fb2b93804718ba60ba1ce3ce78508d8b3c2d416e886829ce98e4fe8a011cf06",
+    "erase_rects": [],
+    "faces": [
+      {
+        "box": [
+          107,
+          36,
+          402,
+          317
+        ],
+        "angle": 0
+      }
+    ],
+    "images": 1
   },
   {
     "key": "mantou_duel_093",
     "name": "可乐围观",
-    "caption": "{name}，你继续，我把可乐打开。",
     "category": "动态回怼",
     "asset": "093.gif",
     "animated": true,
@@ -2322,12 +3553,24 @@
     ],
     "reviewed_source_index": 202,
     "source_frames": 22,
-    "asset_sha256": "753519c790299a6b74de770cf3fda9ac6ef29506eefa68efe3542458acc0917a"
+    "asset_sha256": "753519c790299a6b74de770cf3fda9ac6ef29506eefa68efe3542458acc0917a",
+    "erase_rects": [],
+    "faces": [
+      {
+        "box": [
+          52,
+          41,
+          218,
+          220
+        ],
+        "angle": 0
+      }
+    ],
+    "images": 1
   },
   {
     "key": "mantou_duel_094",
     "name": "饭碗震惊",
-    "caption": "{name}，你这话把我的碗都惊掉了。",
     "category": "动态回怼",
     "asset": "094.gif",
     "animated": true,
@@ -2347,12 +3590,24 @@
     ],
     "reviewed_source_index": 203,
     "source_frames": 11,
-    "asset_sha256": "b4529dd3f1c44f2a27736b756adc60ab7ae923f5aa7b4b913dce64ccae59d4fd"
+    "asset_sha256": "b4529dd3f1c44f2a27736b756adc60ab7ae923f5aa7b4b913dce64ccae59d4fd",
+    "erase_rects": [],
+    "faces": [
+      {
+        "box": [
+          21,
+          1,
+          84,
+          56
+        ],
+        "angle": 0
+      }
+    ],
+    "images": 1
   },
   {
     "key": "mantou_duel_095",
     "name": "再说一遍",
-    "caption": "{name}，刚才那句，你再说一遍？",
     "category": "熊猫头",
     "asset": "095.png",
     "animated": false,
@@ -2364,7 +3619,7 @@
       0,
       0,
       198,
-      192
+      144
     ],
     "source_size": [
       198,
@@ -2372,12 +3627,24 @@
     ],
     "reviewed_source_index": 204,
     "source_frames": 1,
-    "asset_sha256": "6f5848fadae6f965573b7bc13449639ad3c69361850a1d09a8aefa4af19c709d"
+    "asset_sha256": "b0cbb4244b78d19bd706216f82fe95c08412e538b92a6842a9dd97a4b96d910e",
+    "erase_rects": [],
+    "faces": [
+      {
+        "box": [
+          34,
+          21,
+          162,
+          144
+        ],
+        "angle": 0
+      }
+    ],
+    "images": 1
   },
   {
     "key": "mantou_duel_096",
     "name": "强者世界",
-    "caption": "{name}，这就是你的逻辑世界吗？",
     "category": "熊猫头",
     "asset": "096.png",
     "animated": false,
@@ -2389,7 +3656,7 @@
       0,
       0,
       168,
-      146
+      112
     ],
     "source_size": [
       168,
@@ -2397,12 +3664,24 @@
     ],
     "reviewed_source_index": 205,
     "source_frames": 1,
-    "asset_sha256": "e8ba71307547968caf754b776ba6d88a744a39dcfb03130e9c685476f46b2541"
+    "asset_sha256": "126e5a78b80cc0dfaaaebce01cb3bd4999046cca88c588c5226534ded4125ebe",
+    "erase_rects": [],
+    "faces": [
+      {
+        "box": [
+          36,
+          9,
+          140,
+          106
+        ],
+        "angle": 0
+      }
+    ],
+    "images": 1
   },
   {
     "key": "mantou_duel_097",
     "name": "灵魂出走",
-    "caption": "{name}，我听得灵魂都出去了。",
     "category": "动态回怼",
     "asset": "097.gif",
     "animated": true,
@@ -2412,7 +3691,7 @@
     "source_sha256": "a7e8da2e417cfa5a1702b101b3c7b4ac7c8a12431efd6cadf7a66a35c743ae17",
     "crop": [
       0,
-      0,
+      74,
       300,
       300
     ],
@@ -2422,12 +3701,81 @@
     ],
     "reviewed_source_index": 206,
     "source_frames": 5,
-    "asset_sha256": "6b9e4e796dddaad2138bf8576665c9f8d97ca07d01dcb1dfc9b6879e5c22fec7"
+    "asset_sha256": "6e9cc65ebbe093a3b6ee8178e809c589738008ba9f35830874f79f3d41bfba4e",
+    "erase_rects": [],
+    "faces": [
+      {
+        "box": [
+          120,
+          78,
+          211,
+          162
+        ],
+        "angle": -25
+      }
+    ],
+    "images": 1,
+    "frame_faces": [
+      [
+        {
+          "box": [
+            120,
+            78,
+            211,
+            162
+          ],
+          "angle": -25
+        }
+      ],
+      [
+        {
+          "box": [
+            123,
+            105,
+            211,
+            192
+          ],
+          "angle": 90
+        }
+      ],
+      [
+        {
+          "box": [
+            99,
+            109,
+            184,
+            196
+          ],
+          "angle": 180
+        }
+      ],
+      [
+        {
+          "box": [
+            88,
+            83,
+            180,
+            177
+          ],
+          "angle": 270
+        }
+      ],
+      [
+        {
+          "box": [
+            103,
+            63,
+            194,
+            151
+          ],
+          "angle": 315
+        }
+      ]
+    ]
   },
   {
     "key": "mantou_duel_098",
     "name": "温度升高",
-    "caption": "{name}，先降温，别把话题烧糊了。",
     "category": "动态回怼",
     "asset": "098.gif",
     "animated": true,
@@ -2437,7 +3785,7 @@
     "source_sha256": "97d9bbb0ad3993cf003192af28484f9c536768151940e8a12ffa4c654230f5fc",
     "crop": [
       0,
-      0,
+      37,
       300,
       300
     ],
@@ -2447,12 +3795,34 @@
     ],
     "reviewed_source_index": 207,
     "source_frames": 6,
-    "asset_sha256": "bfc50be024353e0035b4d97c4f6b007ffcd7752b2ee9bd16fc7062c0584b0ffa"
+    "asset_sha256": "b37b07afb6da6c423bd8fe7839728feac1861f1bca72c5d7426d566fac804314",
+    "erase_rects": [
+      {
+        "box": [
+          0,
+          0,
+          300,
+          66
+        ],
+        "fill": "white"
+      }
+    ],
+    "faces": [
+      {
+        "box": [
+          61,
+          32,
+          242,
+          242
+        ],
+        "angle": 0
+      }
+    ],
+    "images": 1
   },
   {
     "key": "mantou_duel_099",
     "name": "动态挠头",
-    "caption": "{name}，越听越挠头，你等我捋捋。",
     "category": "动态回怼",
     "asset": "099.gif",
     "animated": true,
@@ -2472,12 +3842,34 @@
     ],
     "reviewed_source_index": 208,
     "source_frames": 2,
-    "asset_sha256": "e6aa5de34dc14db0aa7c4e1574e43d4a9e202885411d83d43005ed83da45ad90"
+    "asset_sha256": "de60300d8fe82dac1cc0f79cc8f7e3008dbdd64d2ab3bb63cdf17eaef94f2c80",
+    "erase_rects": [
+      {
+        "box": [
+          166,
+          0,
+          240,
+          83
+        ],
+        "fill": "white"
+      }
+    ],
+    "faces": [
+      {
+        "box": [
+          65,
+          84,
+          162,
+          174
+        ],
+        "angle": 0
+      }
+    ],
+    "images": 1
   },
   {
     "key": "mantou_duel_100",
     "name": "不吃这套",
-    "caption": "{name}，这套话术对我没用。",
     "category": "动态回怼",
     "asset": "100.gif",
     "animated": true,
@@ -2489,7 +3881,7 @@
       0,
       0,
       224,
-      190
+      132
     ],
     "source_size": [
       224,
@@ -2497,6 +3889,19 @@
     ],
     "reviewed_source_index": 209,
     "source_frames": 2,
-    "asset_sha256": "b96217c2ab75738a3b231623829997413d3d902453f41738786065a0cfed499e"
+    "asset_sha256": "d08c32cc1431ac36bc988f55f3bebd4f62d1a1d61f9246fbaf9bd2fbaf5cc83a",
+    "erase_rects": [],
+    "faces": [
+      {
+        "box": [
+          45,
+          18,
+          163,
+          127
+        ],
+        "angle": 0
+      }
+    ],
+    "images": 1
   }
 ]

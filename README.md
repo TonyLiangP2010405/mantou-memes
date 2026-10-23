@@ -2,7 +2,7 @@
 
 适用于 [MemeCrafters/meme-generator](https://github.com/MemeCrafters/meme-generator) **0.1.14 / 0.1.x** 的独立表情模板库。现有 **120 个模板：111 个 PNG、9 个循环 GIF**。
 
-最新新增 **100 个网络梗图裁切模板**：60 个熊猫头、25 个白色小人、15 个猫猫，使用昵称生成反问、嫌弃、阴阳、回怼和围观文案，其中 7 个保留原图动作。底图逐张选择并记录裁切区域，[查看新增 100 个](DUEL_CATALOG.md) · [查看逐图来源](ASSET_SOURCES.md)。此前 20 个原创绘制模板继续保留。
+最新新增 **100 个换头像模板：98 个单头像、2 个双头像**。60 个熊猫头、25 个白色小人、15 个猫猫底图逐张裁切、清理旧字幕并校准头像区域，保留原图动作和背景，其中 7 个为 GIF。**这一批不接受文字输入，不绘制昵称或文案。** [查看新增 100 个](DUEL_CATALOG.md) · [查看逐图来源](ASSET_SOURCES.md)。此前 20 个绘制模板继续保留。
 
 模板会真正替换输入头像或文字，不是只能转发的成品图库。通过上游公开的 `add_meme` 注册、`load_memes` 加载；无需 fork 或修改生成器。所有键名带 `mantou_` 前缀，避免和现有库撞名。
 
@@ -39,10 +39,6 @@ load_memes(Path("memes").resolve())
 result = get_meme("mantou_battery")(images=[Path("avatar.png")])
 Path("result.png").write_bytes(result.getvalue())
 
-# 纯文字模板。
-result = get_meme("mantou_receipt")(texts=["群友昵称"])
-Path("receipt.png").write_bytes(result.getvalue())
-
 # 双头像模板：第一张在左，第二张在右。
 result = get_meme("mantou_charge")(images=[Path("bot.png"), Path("friend.png")])
 Path("charge.png").write_bytes(result.getvalue())
@@ -51,9 +47,13 @@ Path("charge.png").write_bytes(result.getvalue())
 result = get_meme("mantou_loading")(images=[Path("avatar.png")])
 Path("loading.gif").write_bytes(result.getvalue())
 
-# 网络底图回怼模板：输入昵称，生成带该昵称的回怼文案。
-result = get_meme("mantou_duel_006")(texts=["群友昵称"])
+# 新增的网络底图换头像模板：只传图片，不需要文字。
+result = get_meme("mantou_duel_006")(images=[Path("avatar.png")])
 Path("duel.png").write_bytes(result.getvalue())
+
+# 新增双头像模板：左右两人分别替换。
+result = get_meme("mantou_duel_045")(images=[Path("bot.png"), Path("friend.png")])
+Path("duel_pair.png").write_bytes(result.getvalue())
 ```
 
 也可以在上游生成器的 `config.toml` 中，把本仓库 **`memes` 目录的绝对路径**加入 `[meme].meme_dirs`；保留你已有的其他目录。
@@ -76,7 +76,7 @@ meme_dirs = ["/path/to/mantou-memes/memes"]
 
 本库包含完整中文字体、程序绘制代码和已裁切的网络底图，本库自身加载后不需要额外下载字体或背景图。头像输入仍由调用方提供，插件获取 QQ 头像需要网络。上游内置模板的资源下载机制与本库独立。
 
-新增 100 个模板使用昵称配文；之前的单头像、双头像模板保持原有输入方式。网络底图的裁切成品已随库提供，生成时不访问素材来源网站。
+新增 100 个模板均为换头像：98 个使用参与者头像，2 个依次使用机器人和参与者头像。网络底图的裁切成品已随库提供，生成时不访问素材来源网站。
 
 如果插件此前已缓存旧版模板库，先停止机器人，删除本插件数据目录下的 **`meme_repos/mantou-memes/`** 缓存目录，然后启动机器人，加载器会重新下载当前仓库。直接使用本库的用户执行 `git pull` 后重启调用方即可。
 
@@ -91,9 +91,9 @@ python tools/generate_previews.py
 
 测试通过**真实的上游 `load_memes` 和 `Meme.__call__`**检查注册及输出，覆盖全部模板的 PNG/GIF 解码、长昵称、透明/极小/纵向/JPEG 输入、双头像顺序和非法参数。测试与预览脚本使用临时配置，不会加载用户的第三方模板，也不发起网络请求。
 
-程序绘制的模板在 `memes/mantou/__init__.py` 中维护；网络底图模板在 `memes/mantou_duel/templates.json` 中维护，包含原图固定提交链接、SHA256、像素裁切矩形和配文。需要重建裁切素材时，显式运行 `python tools/prepare_duel_assets.py --cache-dir /path/to/cache`，该开发工具才会下载原图；运行时不下载。GIF 超过 16 帧时采样并合并帧时长，单帧 GIF 按静态图处理。
+程序绘制的模板在 `memes/mantou/__init__.py` 中维护；换头像模板在 `memes/mantou_duel/templates.json` 中维护，包含原图固定提交链接、SHA256、裁切矩形、旧字幕清理区域、头像嵌入矩形及旋转角度。动态头像会随对应帧的位置和角度变化。需要重建裁切素材时，显式运行 `python tools/prepare_duel_assets.py --cache-dir /path/to/cache`，该开发工具才会下载原图；运行时不下载。GIF 超过 16 帧时采样并合并帧时长，单帧 GIF 按静态图处理。
 
-测试逐个验证新增 100 个模板的昵称替换，并对底图内容本身去重，防止用一张底图改文案凑数量。每个模板保持 512×512，输入限制为 1 段文字、1 张头像或 2 张头像之一，不需要强制附加参数。字体不支持的字符（例如部分彩色 emoji）可能显示为缺字框，常用简体中文、拉丁字母和数字可用。
+测试逐个验证新增 100 个模板的头像替换位置、双头像顺序、逐帧位置及文字参数拒绝行为，并检查底图去重。新模板只接受 1 张或 2 张头像，每个模板保持 512×512，不需要额外文字参数。首批保留模板的原有输入规则保持不变。
 
 ## 许可与来源
 
