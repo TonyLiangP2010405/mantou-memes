@@ -14,9 +14,10 @@ def picture(color, format="PNG", mode="RGB", size=(320, 240)):
     return output.getvalue()
 
 
-def test_all_twenty_templates_registered_and_compatible(memes):
-    assert len(memes) == 20
-    assert len({m.key for m in memes}) == 20
+def test_all_templates_registered_and_compatible(memes):
+    assert len(memes) == 120
+    assert len({m.key for m in memes}) == 120
+    assert sum(m.key.startswith("mantou_duel_") for m in memes) == 100
     for meme in memes:
         p = meme.params_type
         assert p.min_images == p.max_images in (0, 1, 2)
@@ -36,6 +37,8 @@ def test_real_backend_renders_every_template(memes, kind):
         "jpeg": lambda: picture("#d5a3bc", format="JPEG"),
     }
     for meme in memes:
+        if kind != "standard" and not meme.params_type.min_images:
+            continue
         result = meme(
             images=[samples[kind]() for _ in range(meme.params_type.min_images)],
             texts=["馒头群友"] if meme.params_type.min_texts else [],
@@ -45,10 +48,10 @@ def test_real_backend_renders_every_template(memes, kind):
         assert len(data) < 2_000_000, meme.key
         with Image.open(BytesIO(data)) as image:
             assert image.size == (512, 512), meme.key
-            if meme.key in {"mantou_overheat", "mantou_loading"}:
-                assert image.format == "GIF" and image.n_frames == 8
+            if "动图" in meme.tags:
+                assert image.format == "GIF" and 2 <= image.n_frames <= 16
                 assert image.info["loop"] == 0
-                image.seek(7)
+                image.seek(image.n_frames - 1)
                 image.load()
             else:
                 assert image.format == "PNG" and image.n_frames == 1
