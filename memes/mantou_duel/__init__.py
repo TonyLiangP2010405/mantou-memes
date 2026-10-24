@@ -28,12 +28,29 @@ def frame(source, avatars, faces):
         size = (x1 - x0, y1 - y0)
         target = avatar.image.convert("RGBA")
         if face.get("angle", 0):
-            target = target.rotate(face["angle"], expand=True)
-        target = ImageOps.fit(target, size, method=Image.Resampling.LANCZOS)
+            # Rotate inside a square before mapping its inscribed circle to the
+            # oval. Expanding a rotated rectangle and fitting it leaves white
+            # triangles inside the face mask, especially in the rolling GIF.
+            side = max(size)
+            target = ImageOps.fit(target, (side, side), method=Image.Resampling.LANCZOS)
+            target = target.rotate(face["angle"], resample=Image.Resampling.BICUBIC)
+            target = target.resize(size, Image.Resampling.LANCZOS)
+        else:
+            target = ImageOps.fit(target, size, method=Image.Resampling.LANCZOS)
         opaque = Image.new("RGB", size, "white")
         opaque.paste(target, (0, 0), target)
         mask = Image.new("L", (size[0] * 3, size[1] * 3))
-        ImageDraw.Draw(mask).ellipse((0, 0, mask.width - 1, mask.height - 1), fill=255)
+        draw = ImageDraw.Draw(mask)
+        draw.ellipse((0, 0, mask.width - 1, mask.height - 1), fill=255)
+        # Source coordinates keep foreground props registered as the image scales.
+        for polygon in face.get("preserve", []):
+            draw.polygon(
+                [
+                    (round((x * sx + left - x0) * 3), round((y * sy + top - y0) * 3))
+                    for x, y in polygon
+                ],
+                fill=0,
+            )
         mask = mask.resize(size, Image.Resampling.LANCZOS)
         canvas.paste(opaque, (x0, y0), mask)
     return canvas
@@ -81,5 +98,5 @@ for template in TEMPLATES:
             "动图" if template["animated"] else "静态",
         },
         date_created=datetime(2026, 10, 23),
-        date_modified=datetime(2026, 10, 23),
+        date_modified=datetime(2026, 10, 24),
     )
