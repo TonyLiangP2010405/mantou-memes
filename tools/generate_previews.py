@@ -39,11 +39,11 @@ def main():
             else 0
             if m.key.startswith("mantou_duel_")
             else 1,
-            m.key,
+            int(m.key.rsplit("_", 1)[1]) if m.key.startswith("mantou_action_") else m.key,
         ),
     )
-    if len(memes) != 620:
-        raise RuntimeError(f"Expected 620 templates, got {len(memes)}")
+    if len(memes) != 1120:
+        raise RuntimeError(f"Expected 1120 templates, got {len(memes)}")
     avatars = [example_avatar("#8cbbb2"), example_avatar("#f4bd9b", True)]
     output = ROOT / "previews"
     output.mkdir(exist_ok=True)
@@ -101,7 +101,7 @@ def main():
     for i in range(0, len(rows), 20):
         sections.append(f"## 第 {i // 20 + 1} 页\n\n" + table + "\n".join(rows[i : i + 20]))
     (ROOT / "CATALOG.md").write_text(
-        "# 620 个模板预览\n\n" + links + "\n\n" + "\n\n".join(sections) + "\n", encoding="utf-8"
+        "# 1120 个模板预览\n\n" + links + "\n\n" + "\n\n".join(sections) + "\n", encoding="utf-8"
     )
     (ROOT / "DUEL_CATALOG.md").write_text(
         "# 新增 100 个换头像模板\n\n98 个单头像、2 个双头像模板，均使用不同网络底图裁切制作，不接受文字输入，不叠加昵称或文案。\n\n"
@@ -118,11 +118,23 @@ def main():
     animated = sum(item["animated"] for item in actions)
     (ROOT / "ACTIONS_CATALOG.md").write_text(
         f"# 新增 500 个换头像模板\n\n{animated} 个循环 GIF、{500 - animated} 个 PNG。每个模板只接受 1 张头像，不接受文字输入。\n\n"
+        + " · ".join(f"[预览 {i}](previews/overview-{i:02d}.jpg)" for i in range(7, 32))
+        + "\n\n"
+        + "\n\n".join(sections[6:31])
+        + "\n",
+        encoding="utf-8",
+    )
+    next_actions = json.loads(
+        (ROOT / "memes/mantou_actions_next/templates.json").read_text(encoding="utf-8")
+    )
+    next_animated = sum(item["animated"] for item in next_actions)
+    (ROOT / "ACTIONS_2_CATALOG.md").write_text(
+        f"# 第二批新增 500 个换头像模板\n\n{next_animated} 个循环 GIF、{500 - next_animated} 个 PNG。每个模板只接受 1 张头像，不接受文字输入。编号 501–1000；动图保留真实动作并逐帧定位。\n\n"
         + " · ".join(
-            f"[预览 {i}](previews/overview-{i:02d}.jpg)" for i in range(7, len(sheets) + 1)
+            f"[预览 {i}](previews/overview-{i:02d}.jpg)" for i in range(32, len(sheets) + 1)
         )
         + "\n\n"
-        + "\n\n".join(sections[6:])
+        + "\n\n".join(sections[31:])
         + "\n",
         encoding="utf-8",
     )
@@ -131,12 +143,12 @@ def main():
         "",
         "本批素材来自 [ChineseBQB](https://github.com/zhaoolee/ChineseBQB) 的公开图集。代码与本项目新增文案采用 MIT；网络底图权利仍归相应原作者，不因本项目代码许可证而变更。采集库未逐张提供独立授权信息，本项目不将这些底图标记为原创或 MIT 素材。",
         "",
-        "链接固定到上游提交，像素裁切矩形为 `[左, 上, 右, 下]`。原图旧字幕通过裁切或清理文字区域去除；头像区域、旋转角度、逐帧位置、源图和裁切图 SHA256 分别记录在 `memes/mantou_duel/templates.json` 与 `memes/mantou_actions/templates.json` 中。运行时不绘制文字。原 100 个模板最多保留 16 帧，新 500 个模板最多保留 12 帧，等间隔采样时合并原帧时长。仅字幕或水印闪动的素材不计入动作 GIF。",
+        "链接固定到上游提交，像素裁切矩形为 `[左, 上, 右, 下]`。素材按画面裁切，部分原图仍保留场景字幕、标识或道具字样；生成器不接受额外文字。头像区域、旋转角度、逐帧位置、源图和裁切图 SHA256 分别记录在 `memes/mantou_duel/templates.json` 、`memes/mantou_actions/templates.json` 与 `memes/mantou_actions_next/templates.json` 中。运行时不绘制文字。原 100 个模板最多保留 16 帧，后两批各 500 个模板最多保留 12 帧，等间隔采样时合并原帧时长。仅字幕或水印闪动的素材不计入动作 GIF。",
         "",
         "| 模板 | 原图 | 原始尺寸 | 裁切矩形 |",
         "|---|---|---|---|",
     ]
-    for item in definitions + actions:
+    for item in definitions + actions + next_actions:
         sources.append(
             f"| `{item['key']}` {item['name']} | [来源]({item['source_url']}) | {item['source_size']} | {item['crop']} |"
         )

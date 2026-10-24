@@ -1,8 +1,10 @@
 # mantou-memes
 
-适用于 [MemeCrafters/meme-generator](https://github.com/MemeCrafters/meme-generator) **0.1.14 / 0.1.x** 的独立表情模板库。现有 **620 个模板：417 个 PNG、203 个循环 GIF**。
+适用于 [MemeCrafters/meme-generator](https://github.com/MemeCrafters/meme-generator) **0.1.14 / 0.1.x** 的独立表情模板库。现有 **1120 个模板：855 个 PNG、265 个循环 GIF**。
 
-最新新增 **500 个单头像模板：194 个循环 GIF、306 个 PNG**，来自 45 个公开图集。人物、萌娃、熊猫、猫狗、武侠、影视与手势等素材逐张筛选、裁切并校准，动图按保留帧分别定位，卡通头部使用轮廓蒙版。**这一批只接受 1 张头像，不接受文字输入，不绘制昵称或文案。** [查看新增 500 个](ACTIONS_CATALOG.md) · [本批对齐复核](docs/actions-review.md)。
+最新再增加 **500 个单头像模板：62 个真实循环 GIF、438 个 PNG**，覆盖 52 个图集。编号 **`mantou_action_501`–`mantou_action_1000`**，关键词 **馒头动作501–馒头动作1000**。仅换头像，不接受文字输入。企鹅、动漫、猫狗、影视与手势等素材经过居中原图/换头像对照复核；动图按全部保留帧检查，修正了探头猫桌沿、狗狗栏杆、巴哥犬双眼以及卡通头部定位。[查看本批 500 个](ACTIONS_2_CATALOG.md) · [本批复核记录](docs/actions-next-review.md)。
+
+此前新增 **500 个单头像模板：194 个循环 GIF、306 个 PNG**，来自 45 个公开图集。人物、萌娃、熊猫、猫狗、武侠、影视与手势等素材逐张筛选、裁切并校准，动图按保留帧分别定位，卡通头部使用轮廓蒙版。**这一批只接受 1 张头像，不接受文字输入，不绘制昵称或文案。** [查看新增 500 个](ACTIONS_CATALOG.md) · [本批对齐复核](docs/actions-review.md)。
 
 此前新增的 **100 个换头像模板：98 个单头像、2 个双头像**。60 个熊猫头、25 个白色小人、15 个猫猫底图逐张裁切、清理旧字幕并校准头像区域，保留原图动作和背景，其中 7 个为 GIF。**这一批不接受文字输入，不绘制昵称或文案。** [查看新增 100 个](DUEL_CATALOG.md) · [查看逐图来源](ASSET_SOURCES.md)。此前 20 个绘制模板继续保留。
 
@@ -10,7 +12,7 @@
 
 ![模板总览](previews/overview.jpg)
 
-完整动图和单张预览：[CATALOG.md](CATALOG.md)，提供 31 页总览。选题来源与范围：[主题调研](docs/themes.md)。
+完整动图和单张预览：[CATALOG.md](CATALOG.md)，提供 56 页总览。选题来源与范围：[主题调研](docs/themes.md)。
 
 GitHub 的源码 ZIP 不包含预览图库，减少插件首次下载的体积；运行所需的代码、字体和底图完整保留。在线仓库可查看全部预览，`git clone` 也会取得完整图库。
 
@@ -53,7 +55,7 @@ Path("charge.png").write_bytes(result.getvalue())
 result = get_meme("mantou_loading")(images=[Path("avatar.png")])
 Path("loading.gif").write_bytes(result.getvalue())
 
-# 最新一批 500 个动作模板：只传参与者头像。
+# 第一批 500 个动作模板：只传参与者头像。
 result = get_meme("mantou_action_001")(images=[Path("avatar.png")])
 Path("action.gif").write_bytes(result.getvalue())
 
@@ -77,7 +79,7 @@ meme_dirs = ["/path/to/mantou-memes/memes"]
 
 ## 馒头好感度插件
 
-配套的 [nonebot-plugin-mantou-affection](https://github.com/TonyLiangP2010405/nonebot-plugin-mantou-affection) 可以通过外部仓库加载器下载本库的 `memes/` 目录。转盘原有规则可直接使用全部 620 个模板：
+配套的 [nonebot-plugin-mantou-affection](https://github.com/TonyLiangP2010405/nonebot-plugin-mantou-affection) 可以通过外部仓库加载器下载本库的 `memes/` 目录。转盘原有规则可直接使用全部 1120 个模板：
 
 - 纯文字：参与者群昵称。
 - 单头像：参与者头像。
@@ -88,7 +90,7 @@ meme_dirs = ["/path/to/mantou-memes/memes"]
 
 新增 500 个模板均使用参与者头像；此前 100 个换头像模板中，98 个使用参与者头像，2 个依次使用机器人和参与者头像。网络底图的裁切成品已随库提供，生成时不访问素材来源网站。
 
-如果插件此前已缓存旧版模板库，先停止机器人，删除本插件数据目录下的 **`meme_repos/mantou-memes/`** 缓存目录，然后启动机器人，加载器会重新下载当前仓库。直接使用本库的用户执行 `git pull` 后重启调用方即可。
+插件 0.24.0+ 启动时发现缓存缺少本批模板模块，会自动更新一次；已含新模块的完整缓存继续复用。旧版插件可升级，或停止机器人后删除本插件数据目录下的 **`meme_repos/mantou-memes/`** 再启动。直接使用本库的用户执行 `git pull` 后重启调用方即可。
 
 ## 开发与验证
 
@@ -101,7 +103,7 @@ python tools/generate_previews.py
 
 测试通过**真实的上游 `load_memes` 和 `Meme.__call__`**检查注册及输出，覆盖全部模板的 PNG/GIF 解码、长昵称、透明/极小/纵向/JPEG 输入、双头像顺序和非法参数。测试与预览脚本使用临时配置，不会加载用户的第三方模板，也不发起网络请求。
 
-程序绘制的模板在 `memes/mantou/__init__.py` 中维护；换头像模板在 `memes/mantou_duel/templates.json` 和 `memes/mantou_actions/templates.json` 中维护，包含原图固定提交链接、SHA256、裁切矩形、旧字幕清理区域、头像嵌入矩形及旋转角度。动态头像会随对应帧的位置和角度变化。需要重建裁切素材时，显式运行 `python tools/prepare_duel_assets.py --cache-dir /path/to/cache`，该开发工具才会下载原图；运行时不下载。GIF 超过 16 帧时采样并合并帧时长，单帧 GIF 按静态图处理。
+程序绘制的模板在 `memes/mantou/__init__.py` 中维护；换头像模板在 `memes/mantou_duel/templates.json`、`memes/mantou_actions/templates.json` 和 `memes/mantou_actions_next/templates.json` 中维护，包含原图固定提交链接、SHA256、裁切矩形、旧字幕清理区域、头像嵌入矩形及旋转角度。动态头像会随对应帧的位置和角度变化。需要重建裁切素材时，显式运行 `python tools/prepare_duel_assets.py --cache-dir /path/to/cache`，该开发工具才会下载原图；运行时不下载。GIF 超过 16 帧时采样并合并帧时长，单帧 GIF 按静态图处理。
 
 新 500 个模板逐个经过真实后端出图检查，另验证源图及底图 SHA256 去重、逐帧坐标与轮廓边界、实际人脸特征点覆盖、轮廓遮挡和文字拒绝；头像格式变体在共享渲染器的 PNG/GIF 代表模板上检查。
 
@@ -109,6 +111,6 @@ python tools/generate_previews.py
 
 ## 许可与来源
 
-代码、程序绘制的模板构图、示例头像及本项目新增文案采用 [MIT](LICENSE)。第一批 20 个为程序绘制；其余 600 个使用 [ChineseBQB](https://github.com/zhaoolee/ChineseBQB) 公开图集中的不同网络梗图裁切制作，底图与其衍生预览的相应权利仍归原作者，具体来源与范围见 [ASSET_SOURCES.md](ASSET_SOURCES.md)，不将第三方图像标记为本项目原创或 MIT 素材。使用者传入的头像归其相应权利人所有。
+代码、程序绘制的模板构图、示例头像及本项目新增文案采用 [MIT](LICENSE)。第一批 20 个为程序绘制；其余 1100 个使用 [ChineseBQB](https://github.com/zhaoolee/ChineseBQB) 公开图集中的不同网络梗图裁切制作，底图与其衍生预览的相应权利仍归原作者，具体来源与范围见 [ASSET_SOURCES.md](ASSET_SOURCES.md)，不将第三方图像标记为本项目原创或 MIT 素材。使用者传入的头像归其相应权利人所有。
 
 随库字体 [Noto Sans SC](https://github.com/google/fonts/tree/main/ofl/notosanssc) 由 Google Fonts 提供，单独遵循 [SIL Open Font License 1.1](memes/mantou/OFL.txt)。原始字体未修改，SHA256：`a3041811a78c361b1de50f953c805e0244951c21c5bd412f7232ef0d899af0da`。完整字体约 17 MiB，保留字库以支持用户自定义中文昵称。
