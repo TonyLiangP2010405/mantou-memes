@@ -1,0 +1,2 @@
+# The plugin downloads source archives; gallery files remain visible on GitHub.
+previews/** export-ignore

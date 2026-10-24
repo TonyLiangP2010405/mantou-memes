@@ -15,9 +15,10 @@ def picture(color, format="PNG", mode="RGB", size=(320, 240)):
 
 
 def test_all_templates_registered_and_compatible(memes):
-    assert len(memes) == 120
-    assert len({m.key for m in memes}) == 120
+    assert len(memes) == 620
+    assert len({m.key for m in memes}) == 620
     assert sum(m.key.startswith("mantou_duel_") for m in memes) == 100
+    assert sum(m.key.startswith("mantou_action_") for m in memes) == 500
     for meme in memes:
         p = meme.params_type
         assert p.min_images == p.max_images in (0, 1, 2)
@@ -37,6 +38,14 @@ def test_real_backend_renders_every_template(memes, kind):
         "jpeg": lambda: picture("#d5a3bc", format="JPEG"),
     }
     for meme in memes:
+        # All 500 actions get a real render below. Input-format behavior belongs
+        # to their shared renderer, so exercise it once per new output format.
+        if (
+            kind != "standard"
+            and meme.key.startswith("mantou_action_")
+            and meme.key not in {"mantou_action_001", "mantou_action_500"}
+        ):
+            continue
         if kind != "standard" and not meme.params_type.min_images:
             continue
         result = meme(
