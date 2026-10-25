@@ -15,13 +15,14 @@ def picture(color, format="PNG", mode="RGB", size=(320, 240)):
 
 
 def test_all_templates_registered_and_compatible(memes):
-    assert len(memes) == 1120
-    assert len({m.key for m in memes}) == 1120
+    assert len(memes) == 1620
+    assert len({m.key for m in memes}) == 1620
     assert sum(m.key.startswith("mantou_duel_") for m in memes) == 100
     assert sum(m.key.startswith("mantou_action_") for m in memes) == 1000
+    assert sum(m.key.startswith("mantou_group_") for m in memes) == 500
     for meme in memes:
         p = meme.params_type
-        assert p.min_images == p.max_images in (0, 1, 2)
+        assert p.min_images == p.max_images in range(11)
         assert (p.min_texts, p.max_texts) == ((0, 0) if p.min_images else (1, 1))
         assert meme.key.startswith("mantou_")
         assert "mantou-memes" in meme.tags
@@ -42,13 +43,15 @@ def test_real_backend_renders_every_template(memes, kind):
         # to their shared renderer, so exercise it once per new output format.
         if (
             kind != "standard"
-            and meme.key.startswith("mantou_action_")
+            and meme.key.startswith(("mantou_action_", "mantou_group_"))
             and meme.key
             not in {
                 "mantou_action_001",
                 "mantou_action_500",
                 "mantou_action_501",
                 "mantou_action_1000",
+                "mantou_group_001",
+                "mantou_group_500",
             }
         ):
             continue
@@ -75,7 +78,7 @@ def test_real_backend_renders_every_template(memes, kind):
 
 def test_double_templates_preserve_input_order(memes):
     for meme in [
-        m for m in memes if m.params_type.min_images == 2 and not m.key.startswith("mantou_duel_")
+        m for m in memes if m.params_type.min_images == 2 and not m.key.startswith(("mantou_duel_", "mantou_group_"))
     ]:
         red, blue = picture("red"), picture("blue")
         output = meme(images=[red, blue])

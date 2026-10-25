@@ -34,17 +34,27 @@ def main():
     memes = sorted(
         backend.get_memes(),
         key=lambda m: (
-            2
+            3
+            if m.key.startswith("mantou_group_")
+            else 2
             if m.key.startswith("mantou_action_")
             else 0
             if m.key.startswith("mantou_duel_")
             else 1,
-            int(m.key.rsplit("_", 1)[1]) if m.key.startswith("mantou_action_") else m.key,
+            int(m.key.rsplit("_", 1)[1])
+            if m.key.startswith(("mantou_action_", "mantou_group_"))
+            else m.key,
         ),
     )
-    if len(memes) != 1120:
-        raise RuntimeError(f"Expected 1120 templates, got {len(memes)}")
+    if len(memes) != 1620:
+        raise RuntimeError(f"Expected 1620 templates, got {len(memes)}")
     avatars = [example_avatar("#8cbbb2"), example_avatar("#f4bd9b", True)]
+    avatars += [
+        example_avatar(color, i % 2 == 0)
+        for i, color in enumerate(
+            ["#93b9dc", "#c29eda", "#d896b5", "#c5c87f", "#88cbca", "#cc9696", "#b3a58b", "#9294bf"]
+        )
+    ]
     output = ROOT / "previews"
     output.mkdir(exist_ok=True)
     sheets = [
@@ -54,12 +64,12 @@ def main():
     rows = []
     for index, meme in enumerate(memes):
         count = meme.params_type.min_images
-        images = avatars[1:] if count == 1 else avatars[:count]
+        images = avatars[1:2] if count == 1 else avatars[:count]
         data = meme(images=images, texts=[] if count else ["馒头群友"]).getvalue()
         image = Image.open(BytesIO(data))
         suffix = ".gif" if image.format == "GIF" else ".png"
         path = output / (meme.key + suffix)
-        if meme.key.startswith("mantou_action_"):
+        if meme.key.startswith(("mantou_action_", "mantou_group_")):
             if suffix == ".gif":
                 frames, durations = [], []
                 for frame in ImageSequence.Iterator(image):
@@ -101,7 +111,7 @@ def main():
     for i in range(0, len(rows), 20):
         sections.append(f"## 第 {i // 20 + 1} 页\n\n" + table + "\n".join(rows[i : i + 20]))
     (ROOT / "CATALOG.md").write_text(
-        "# 1120 个模板预览\n\n" + links + "\n\n" + "\n\n".join(sections) + "\n", encoding="utf-8"
+        "# 1620 个模板预览\n\n" + links + "\n\n" + "\n\n".join(sections) + "\n", encoding="utf-8"
     )
     (ROOT / "DUEL_CATALOG.md").write_text(
         "# 新增 100 个换头像模板\n\n98 个单头像、2 个双头像模板，均使用不同网络底图裁切制作，不接受文字输入，不叠加昵称或文案。\n\n"
@@ -130,25 +140,35 @@ def main():
     next_animated = sum(item["animated"] for item in next_actions)
     (ROOT / "ACTIONS_2_CATALOG.md").write_text(
         f"# 第二批新增 500 个换头像模板\n\n{next_animated} 个循环 GIF、{500 - next_animated} 个 PNG。每个模板只接受 1 张头像，不接受文字输入。编号 501–1000；动图保留真实动作并逐帧定位。\n\n"
+        + " · ".join(f"[预览 {i}](previews/overview-{i:02d}.jpg)" for i in range(32, 57))
+        + "\n\n"
+        + "\n\n".join(sections[31:56])
+        + "\n",
+        encoding="utf-8",
+    )
+    groups = json.loads((ROOT / "memes/mantou_groups/templates.json").read_text(encoding="utf-8"))
+    group_gifs = sum(item["animated"] for item in groups)
+    (ROOT / "GROUPS_CATALOG.md").write_text(
+        f"# 新增 500 个双人、多人换头像模板\n\n{group_gifs} 个循环 GIF、{500 - group_gifs} 个 PNG。只换头像，不接受文字输入。双人依次使用 bot 与触发者；多人继续从本群好感榜随机补齐不同成员。\n\n"
         + " · ".join(
-            f"[预览 {i}](previews/overview-{i:02d}.jpg)" for i in range(32, len(sheets) + 1)
+            f"[预览 {i}](previews/overview-{i:02d}.jpg)" for i in range(57, len(sheets) + 1)
         )
         + "\n\n"
-        + "\n\n".join(sections[31:])
+        + "\n\n".join(sections[56:])
         + "\n",
         encoding="utf-8",
     )
     sources = [
         "# 网络底图来源与裁切记录",
         "",
-        "本批素材来自 [ChineseBQB](https://github.com/zhaoolee/ChineseBQB) 的公开图集。代码与本项目新增文案采用 MIT；网络底图权利仍归相应原作者，不因本项目代码许可证而变更。采集库未逐张提供独立授权信息，本项目不将这些底图标记为原创或 MIT 素材。",
+        "早期素材来自 [ChineseBQB](https://github.com/zhaoolee/ChineseBQB) 的公开图集；本批同框素材另来自 getActivity/EmojiPackage、bre4d777/anime-gifs、TranHuuDat2004/my_anime_gif、LTLA/acceptable-anime-gifs、ani-github/animegifs、MohamedTaha123/AnimeGifs 与 keztricks/ImportantBusinessDocuments 的公开图集，具体以每行固定提交链接为准。代码与本项目新增文案采用 MIT；网络底图权利仍归相应原作者，不因本项目代码许可证而变更。采集库未逐张提供独立授权信息，本项目不将这些底图标记为原创或 MIT 素材。",
         "",
-        "链接固定到上游提交，像素裁切矩形为 `[左, 上, 右, 下]`。素材按画面裁切，部分原图仍保留场景字幕、标识或道具字样；生成器不接受额外文字。头像区域、旋转角度、逐帧位置、源图和裁切图 SHA256 分别记录在 `memes/mantou_duel/templates.json` 、`memes/mantou_actions/templates.json` 与 `memes/mantou_actions_next/templates.json` 中。运行时不绘制文字。原 100 个模板最多保留 16 帧，后两批各 500 个模板最多保留 12 帧，等间隔采样时合并原帧时长。仅字幕或水印闪动的素材不计入动作 GIF。",
+        "链接固定到上游提交，像素裁切矩形为 `[左, 上, 右, 下]`。素材按画面裁切，部分原图仍保留场景字幕、标识或道具字样；生成器不接受额外文字。头像区域、旋转角度、逐帧位置、源图和裁切图 SHA256 分别记录在 `memes/mantou_duel/templates.json` 、`memes/mantou_actions/templates.json` 、`memes/mantou_actions_next/templates.json` 与 `memes/mantou_groups/templates.json` 中。运行时不绘制文字。原 100 个模板最多保留 16 帧，两批单头像动作模板最多保留 12 帧，本批同框模板最多保留 16 帧，等间隔采样时合并原帧时长。仅字幕或水印闪动的素材不计入动作 GIF。",
         "",
         "| 模板 | 原图 | 原始尺寸 | 裁切矩形 |",
         "|---|---|---|---|",
     ]
-    for item in definitions + actions + next_actions:
+    for item in definitions + actions + next_actions + groups:
         sources.append(
             f"| `{item['key']}` {item['name']} | [来源]({item['source_url']}) | {item['source_size']} | {item['crop']} |"
         )
